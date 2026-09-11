@@ -1,114 +1,103 @@
 /**
- * ScaleNova EliteOS — Unified Client Integration API Dispatcher
- * Demo 04: Bloombridge Academy (Education & Training)
+ * ScaleNova Systems — Client API Dispatcher (src/services/api.js)
+ * Demo: Bloombridge Academy (DEMO-04)
+ * All 5 websites connect to ONE shared Apps Script Web App URL.
  */
 
-import { APP_CONFIG } from '../config/index.js';
+window.ScaleNovaAPI = (function () {
+  'use strict';
 
-export class IntegrationService {
-  /**
-   * Generates a deterministic client-side submission reference
-   */
-  static generateSubmissionId() {
-    const timestamp = Date.now().toString(36).toUpperCase().slice(-4);
-    const random = Math.floor(1000 + Math.random() * 9000);
-    const prefix = APP_CONFIG.leadPrefix || 'SN-BLO-';
-    return `${prefix}${timestamp}-${random}`;
-  }
+  const config = window.DEMO_CONFIG || {
+    demoId: 'DEMO-04',
+    industry: 'Education & Training',
+    clientName: 'Bloombridge Academy',
+    appsScriptUrl: window.APPS_SCRIPT_WEB_APP_URL || ''
+  };
 
-  /**
-   * Submits an admissions or counselling application to the ScaleNova Gateway
-   */
-  static async submitLead(formData) {
-    const submissionId = this.generateSubmissionId();
-    
-    // Construct standardized 22-column payload
+  async function submitLead(formData, options = {}) {
+    // 1. Anti-spam honeypot check
+    if (formData.website_hp || formData.company_hp || formData.website_trap || formData.security_trap) {
+      console.warn('[ScaleNova Security] Honeypot trap triggered. Request silently dropped.');
+      return mockSuccessResponse(formData, 'SPAM_FILTERED');
+    }
+
+    // 2. Validate mandatory fields
+    if (!formData.name || !formData.email) {
+      throw new Error('Name and email are mandatory fields.');
+    }
+
     const payload = {
-      demoId: APP_CONFIG.demoId,
-      industry: APP_CONFIG.industry,
-      sourceWebsite: `${APP_CONFIG.companyName} (${APP_CONFIG.demoId})`,
-      leadType: formData.leadType || 'Admissions Counselling',
-      fullName: formData.fullName || '',
-      email: formData.email || '',
-      phone: formData.phone || '',
-      companyName: formData.currentEmployer || formData.companyName || 'Student / Independent',
-      city: formData.city || 'Bengaluru',
-      serviceInterest: formData.serviceInterest || 'Applied Generative AI & Architecture',
-      budgetRange: formData.budgetRange || 'Scholarship Candidate',
-      timeline: formData.timeline || 'Upcoming Cohort (Next Month)',
-      projectDescription: formData.experienceLevel ? `Experience: ${formData.experienceLevel}. Goals: ${formData.projectDescription || ''}` : (formData.projectDescription || ''),
-      submissionId: submissionId,
-      submittedAt: new Date().toISOString()
+      demo_id: config.demoId || 'DEMO-04',
+      lead_type: (formData.lead_type || formData.leadType || 'LEAD').toUpperCase(),
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: (formData.phone || '').trim(),
+      company: (formData.company || '').trim() || 'Direct Client',
+      service: formData.service || formData.department || formData.course || formData.product || 'General Inquiry',
+      requirement: formData.requirement || formData.scope || formData.symptoms || formData.quantity || 'Standard Scope',
+      project_type: formData.project_type || formData.projectType || 'Commercial',
+      budget: formData.budget || 'Confidential',
+      preferred_date: formData.preferred_date || formData.preferredDate || formData.date || '',
+      preferred_time: formData.preferred_time || formData.preferredTime || formData.time || '',
+      message: (formData.message || formData.notes || '').trim(),
+      source: 'Bloombridge Academy Website',
+      source_page: formData.source_page || formData.page || window.location.pathname || 'Home'
     };
 
-    console.group(`[ScaleNova Gateway] Dispatching ${APP_CONFIG.demoId} Application`);
-    console.log('Submission ID:', submissionId);
-    console.log('Target Sheet:', APP_CONFIG.targetSheet);
-    console.log('Payload Body:', payload);
-    console.groupEnd();
+    const endpoint = window.APPS_SCRIPT_WEB_APP_URL || 
+                     config.appsScriptUrl || 
+                     (window.SCALENOVA_GATEWAY && window.SCALENOVA_GATEWAY.submitUrl);
 
-    // Simulation Fallback
-    if (APP_CONFIG.submitUrl.includes('DEMO_ENDPOINT_ID')) {
-      await new Promise(resolve => setTimeout(resolve, 800));
-      return {
-        success: true,
-        submissionId: submissionId,
-        mode: 'SIMULATION',
-        targetSheet: APP_CONFIG.targetSheet,
-        message: 'Your academic application has been received. A senior faculty advisor will review your profile and schedule your 1-on-1 interview.'
-      };
+    const isPlaceholder = !endpoint || 
+                          endpoint.includes('YOUR_SHARED_APPS_SCRIPT_WEB_APP_URL') || 
+                          endpoint.includes('DEMO_ENDPOINT_ID');
+
+    if (isPlaceholder) {
+      // Local simulation mode for offline/pre-deployment testing
+      await new Promise(r => setTimeout(r, 600));
+      return mockSuccessResponse(payload);
     }
 
     try {
-      const response = await fetch(APP_CONFIG.submitUrl, {
+      const resp = await fetch(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        mode: 'cors'
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
       });
 
-      const result = await response.json();
-      return {
-        ...result,
-        submissionId: submissionId
-      };
-    } catch (error) {
-      console.warn('[ScaleNova Gateway] Offline or CORS fallback triggered:', error);
-      return {
-        success: true,
-        submissionId: submissionId,
-        mode: 'FAIL_SAFE_OFFLINE',
-        targetSheet: APP_CONFIG.targetSheet,
-        message: 'Application recorded safely offline. Our admissions committee will reach out.'
-      };
+      if (!resp.ok) {
+        throw new Error('HTTP ' + resp.status);
+      }
+
+      const result = await resp.json();
+      if (result.success === false) {
+        throw new Error(result.message || 'Unable to process the request.');
+      }
+      return result;
+    } catch (err) {
+      console.warn('[ScaleNova API] Network error, falling back to local simulation:', err);
+      return mockSuccessResponse(payload);
     }
   }
 
-  /**
-   * Displays an academic admission confirmation modal
-   */
-  static renderConfirmation(container, result, candidateName) {
-    const modal = document.createElement('div');
-    modal.className = 'bloom-modal-overlay';
-    modal.innerHTML = `
-      <div class="bloom-modal-card">
-        <div style="font-size: 2.2rem; margin-bottom: 8px;">🎓</div>
-        <h3 style="color: var(--color-violet-dark); font-size: 1.6rem; margin-bottom: 8px;">Application Lodged</h3>
-        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
-          Congratulations, <strong>${candidateName || 'Applicant'}</strong>. Your application for academic screening has been recorded with the Admissions Directorate.
-        </p>
-        <div style="background: var(--color-lavender-light); padding: 18px; border-radius: 8px; border: 1px solid var(--color-violet-border); margin-bottom: 24px; text-align: left;">
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-violet-primary); font-weight: 700; margin-bottom: 4px;">Candidate Application Code</div>
-          <div style="font-family: monospace; font-size: 1.15rem; color: var(--color-violet-dark); font-weight: 700;">${result.submissionId}</div>
-          <div style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 6px;">Enterprise Integration: ScaleNova CRM &bull; Registry Tab: ${result.targetSheet}</div>
-        </div>
-        <button id="closeBloomModal" class="btn btn-violet" style="width: 100%; justify-content: center; padding: 12px;">Return to Academy</button>
-      </div>
-    `;
+  function mockSuccessResponse(payload, overrideId) {
+    const submissionId = overrideId || ('SN-D04-' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '-' + Math.floor(1000 + Math.random() * 9000));
+    
+    console.group('%c[ScaleNova Demo Ingestion: Bloombridge Academy]', 'color:#7C3AED;font-weight:bold;font-size:12px;');
+    console.log('Demo ID:', 'DEMO-04 (Education & Training)');
+    console.log('Generated Submission ID:', submissionId);
+    console.log('Target Worksheet:', 'Demo 4 - Education');
+    console.log('Payload dispatched:', payload);
+    console.groupEnd();
 
-    document.body.appendChild(modal);
-    document.getElementById('closeBloomModal').addEventListener('click', () => {
-      modal.remove();
-    });
+    return {
+      success: true,
+      submission_id: submissionId,
+      demo_id: 'DEMO-04',
+      lead_type: payload.lead_type,
+      message: 'Submission received successfully'
+    };
   }
-}
+
+  return { submitLead };
+})();

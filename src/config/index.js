@@ -1,3 +1,10 @@
+window.DEMO_CONFIG = {
+  demoId: 'DEMO-04',
+  industry: 'Education & Training',
+  clientName: 'Bloombridge Academy',
+  appsScriptUrl: window.APPS_SCRIPT_WEB_APP_URL || 'YOUR_SHARED_APPS_SCRIPT_WEB_APP_URL'
+};
+
 /**
  * ScaleNova EliteOS — Demo 04: Bloombridge Academy Configuration
  */
