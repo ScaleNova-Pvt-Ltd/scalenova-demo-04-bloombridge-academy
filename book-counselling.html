@@ -3,74 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admissions Application & Profile Evaluation — Bloombridge Academy</title>
-  <meta name="description" content="Apply for Bloombridge executive masterclasses. Schedule a 1-on-1 profile evaluation with our admissions committee.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
+  <title>Admissions Application & Profile Review — Bloombridge Academy</title>
+  <meta name="description" content="Apply for Bloombridge academic fellowships. Schedule a 1-on-1 profile evaluation with the admissions committee.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232D1B69'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo">
-        <div class="brand-badge">BA</div>
-        <div class="brand-name">Bloombridge Academy</div>
+        <div class="brand-crest">BA</div>
+        <div class="brand-text-col">
+          <span class="brand-name">Bloombridge Academy</span>
+          <span class="brand-sub">Institute of Advanced Studies</span>
+        </div>
       </a>
       <nav>
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="programs.html" class="nav-link">Programs</a></li>
-          <li><a href="career-development.html" class="nav-link">Career</a></li>
-          <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
-          <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
+          <li><a href="programs.html" class="nav-link">Academic Programs</a></li>
+          <li><a href="learning-experience.html" class="nav-link">Pedagogy</a></li>
+          <li><a href="career-development.html" class="nav-link">Fellowships</a></li>
+          <li><a href="success-stories.html" class="nav-link">Alumni Chairs</a></li>
           <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-          <li><a href="insights.html" class="nav-link">Research</a></li>
           <li><a href="contact.html" class="nav-link">Campuses</a></li>
         </ul>
       </nav>
-      <a href="book-counselling.html" class="btn btn-violet active" style="padding: 10px 20px;">Apply Now</a>
+      <a href="book-counselling.html" class="btn btn-royal active">Book Counselling</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
       <div style="max-width: 820px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 40px;">
-          <span class="eyebrow">Cohort Screening</span>
-          <h1>Admissions & Career Advisory Consultation</h1>
-          <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.6; margin-top: 12px;">
-            Our cohort sizes are capped at 35 fellows per track to guarantee direct faculty mentorship. Submit your profile for fast-track committee screening.
+        <div style="text-align: center; margin-bottom: 48px;">
+          <div class="academic-eyebrow">Cohort Screening & Profile Review</div>
+          <h1 style="margin-bottom: 12px; font-weight: 500;">Submit Academic Candidacy Dossier</h1>
+          <p style="color: var(--bb-text-muted); font-size: 1.15rem; line-height: 1.7; max-width: 620px; margin: 0 auto;">
+            Our cohort admissions are capped at 35 fellows per track to guarantee direct mentorship from faculty chairs. Submit your profile for committee evaluation.
           </p>
         </div>
 
-        <div style="background: #FFF; border: 1px solid var(--color-violet-border); border-radius: 16px; padding: 44px; box-shadow: 0 12px 32px rgba(124, 58, 237, 0.05);">
+        <div style="background: #FFF; border: 1px solid var(--bb-border); border-radius: 12px; padding: 48px; box-shadow: 0 16px 40px rgba(45, 27, 105, 0.06);">
           <form id="admissionsForm">
-            <div class="grid-2">
+            <!-- Honeypot anti-spam protection -->
+            <input type="text" name="website_hp" id="website_hp" style="display:none !important; position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
               <div class="form-group">
                 <label class="form-label" for="fullName">Candidate Full Name *</label>
-                <input type="text" id="fullName" class="form-input" required placeholder="e.g. Ananya Sundaram">
+                <input type="text" id="fullName" class="form-input" required placeholder="e.g. Dr. Alistair Wright">
               </div>
               <div class="form-group">
-                <label class="form-label" for="email">Work / Professional Email *</label>
-                <input type="email" id="email" class="form-input" required placeholder="ananya.s@enterprise.com">
-              </div>
-            </div>
-
-            <div class="grid-2">
-              <div class="form-group">
-                <label class="form-label" for="phone">Phone Number *</label>
-                <input type="tel" id="phone" class="form-input" required placeholder="+91 98860 55443">
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="currentEmployer">Current Employer / Organization *</label>
-                <input type="text" id="currentEmployer" class="form-input" required placeholder="e.g. Microsoft / Swiggy / Stealth AI">
+                <label class="form-label" for="email">Institutional / Work Email *</label>
+                <input type="email" id="email" class="form-input" required placeholder="alistair.w@enterprise.com">
               </div>
             </div>
 
-            <div class="grid-2">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
               <div class="form-group">
-                <label class="form-label" for="serviceInterest">Executive Masterclass Track *</label>
-                <select id="serviceInterest" class="form-select" required>
+                <label class="form-label" for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" class="form-input" required placeholder="+91 98860 12345">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="companyName">Current Organization / Academic Affiliation *</label>
+                <input type="text" id="companyName" class="form-input" required placeholder="e.g. Google DeepMind / Infosys / Oxford">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+              <div class="form-group">
+                <label class="form-label" for="programSelect">Target Academic Fellowship *</label>
+                <select id="programSelect" class="form-select" required>
                   <option value="Applied Generative AI & Enterprise Architecture">Applied Generative AI & Enterprise Architecture (16 Wks)</option>
                   <option value="High-Frequency FinTech & Distributed Systems">High-Frequency FinTech & Distributed Systems (14 Wks)</option>
                   <option value="The Engineering Executive (VP & CTO Track)">The Engineering Executive (VP & CTO Track) (12 Wks)</option>
@@ -78,46 +82,46 @@
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label" for="experienceLevel">Total Years of Professional Experience *</label>
-                <select id="experienceLevel" class="form-select" required>
-                  <option value="4 to 7 Years (Mid-Senior Tech)">4 to 7 Years (Mid-Senior Tech)</option>
-                  <option value="8 to 12 Years (Lead / Principal)">8 to 12 Years (Lead / Principal)</option>
-                  <option value="12 to 18 Years (Director / VP)">12 to 18 Years (Director / VP)</option>
-                  <option value="18+ Years (CXO / Founder)">18+ Years (CXO / Founder)</option>
+                <label class="form-label" for="experienceSelect">Total Professional Experience *</label>
+                <select id="experienceSelect" class="form-select" required>
+                  <option value="4 to 7 Years (Mid-Senior Technologist)">4 to 7 Years (Mid-Senior Technologist)</option>
+                  <option value="8 to 12 Years (Lead / Principal Architect)">8 to 12 Years (Lead / Principal Architect)</option>
+                  <option value="12 to 18 Years (Director / VP Engineering)">12 to 18 Years (Director / VP Engineering)</option>
+                  <option value="18+ Years (CXO / Fellow / Founder)">18+ Years (CXO / Fellow / Founder)</option>
                 </select>
               </div>
             </div>
 
-            <div class="grid-2">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
               <div class="form-group">
-                <label class="form-label" for="budgetRange">Tuition Sponsorship Preference</label>
-                <select id="budgetRange" class="form-select">
-                  <option value="Self-Sponsored Professional">Self-Sponsored Professional</option>
-                  <option value="Corporate L&D Sponsored">Corporate L&D Sponsored (Require Invoice)</option>
-                  <option value="Applying for Merit Scholarship Grant">Applying for Merit Scholarship Grant</option>
+                <label class="form-label" for="cohortTimeline">Target Cohort Term</label>
+                <select id="cohortTimeline" class="form-select">
+                  <option value="Spring 2026 Term (Immediate)">Spring 2026 Term (Immediate)</option>
+                  <option value="Summer 2026 Intensive">Summer 2026 Intensive (In 3 Months)</option>
+                  <option value="Autumn 2026 Executive Term">Autumn 2026 Executive Term (In 6 Months)</option>
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label" for="timeline">Target Cohort Timeline</label>
-                <select id="timeline" class="form-select">
-                  <option value="Upcoming Spring Cohort (Starting 1st of Next Month)">Upcoming Spring Cohort (Next Month)</option>
-                  <option value="Summer Cohort (In 3 Months)">Summer Cohort (In 3 Months)</option>
-                  <option value="Fall Executive Cohort (In 6 Months)">Fall Executive Cohort (In 6 Months)</option>
+                <label class="form-label" for="sponsorshipType">Tuition Sponsorship Model</label>
+                <select id="sponsorshipType" class="form-select">
+                  <option value="Self-Sponsored Professional">Self-Sponsored Professional</option>
+                  <option value="Corporate L&D Sponsorship (Invoice Required)">Corporate L&D Sponsorship (Invoice Required)</option>
+                  <option value="Merit Grant Fellowship Applicant">Merit Grant Fellowship Applicant</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="projectDescription">Career Objectives & Current Technical Focus</label>
-              <textarea id="projectDescription" class="form-textarea" rows="3" placeholder="Describe your current tech stack, leadership scope, and what you aim to achieve..."></textarea>
+              <label class="form-label" for="careerStatement">Statement of Technical Objectives & Current Research Scope</label>
+              <textarea id="careerStatement" class="form-textarea" rows="4" placeholder="Summarize your current systems architectural responsibilities and what you intend to build or research during the fellowship..."></textarea>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--color-violet-border);">
-              <div style="font-size: 0.8rem; color: var(--color-text-muted); max-width: 440px;">
-                Admissions screening is confidential and integrated with ScaleNova CRM. No spam policy.
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bb-border);">
+              <div style="font-size: 0.8rem; color: var(--bb-text-muted); max-width: 440px; line-height: 1.5;">
+                Confidential academic dossier. Integrated with ScaleNova centralized CRM. Protected by institutional privacy policies.
               </div>
-              <button type="submit" id="submitBtn" class="btn btn-violet" style="padding: 14px 30px;">
-                Submit Application Dossier
+              <button type="submit" id="submitBtn" class="btn btn-royal" style="padding: 14px 32px;">
+                Submit Candidacy Dossier
               </button>
             </div>
           </form>
@@ -128,8 +132,8 @@
 
   <footer class="site-footer">
     <div class="container footer-bottom">
-      <div>&copy; 2026 Bloombridge Academy Ltd. All rights reserved.</div>
-      <div style="color: var(--color-rose-accent);">ScaleNova EliteOS Demo Platform</div>
+      <div>&copy; 2026 Bloombridge Academy Ltd. All academic rights reserved.</div>
+      <div style="color: var(--bb-rose-accent);">Powered by ScaleNova Technology</div>
     </div>
   </footer>
 
@@ -142,30 +146,31 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Submitting Dossier...';
+      submitBtn.innerText = 'Transmitting Candidacy Dossier...';
 
-      const formData = {
-        fullName: document.getElementById('fullName').value.trim(),
+      const payload = {
+        name: document.getElementById('fullName').value.trim(),
         email: document.getElementById('email').value.trim(),
         phone: document.getElementById('phone').value.trim(),
-        currentEmployer: document.getElementById('currentEmployer').value.trim(),
-        serviceInterest: document.getElementById('serviceInterest').value,
-        experienceLevel: document.getElementById('experienceLevel').value,
-        budgetRange: document.getElementById('budgetRange').value,
-        timeline: document.getElementById('timeline').value,
-        projectDescription: document.getElementById('projectDescription').value.trim(),
-        leadType: 'Admissions Application'
+        company: document.getElementById('companyName').value.trim(),
+        service: document.getElementById('programSelect').value,
+        requirement: document.getElementById('experienceSelect').value + ' | ' + document.getElementById('cohortTimeline').value,
+        budget: document.getElementById('sponsorshipType').value,
+        message: document.getElementById('careerStatement').value.trim(),
+        lead_type: 'ADMISSIONS_APPLICATION',
+        website_hp: document.getElementById('website_hp').value
       };
 
       try {
-        const result = await IntegrationService.submitLead(formData);
-        IntegrationService.renderConfirmation(document.body, result, formData.fullName);
+        const result = await IntegrationService.submitLead(payload);
+        IntegrationService.renderConfirmation(document.body, result, payload.name);
         form.reset();
       } catch (err) {
-        alert('Submission error. Please email admissions directly.');
+        console.error('Submission failed:', err);
+        alert('Could not submit application dossier. Please email admissions@bloombridge.demo directly.');
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Submit Application Dossier';
+        submitBtn.innerText = 'Submit Candidacy Dossier';
       }
     });
   </script>

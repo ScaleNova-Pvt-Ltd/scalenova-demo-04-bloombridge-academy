@@ -21,20 +21,20 @@ window.ScaleNovaAPI = (function () {
       return mockSuccessResponse(formData, 'SPAM_FILTERED');
     }
 
-    // 2. Validate mandatory fields
-    if (!formData.name || !formData.email) {
+    const nameVal = (formData.name || formData.fullName || '').trim();
+    if (!nameVal || !formData.email) {
       throw new Error('Name and email are mandatory fields.');
     }
 
     const payload = {
       demo_id: config.demoId || 'DEMO-04',
       lead_type: (formData.lead_type || formData.leadType || 'LEAD').toUpperCase(),
-      name: formData.name.trim(),
+      name: nameVal,
       email: formData.email.trim(),
       phone: (formData.phone || '').trim(),
-      company: (formData.company || '').trim() || 'Direct Client',
-      service: formData.service || formData.department || formData.course || formData.product || 'General Inquiry',
-      requirement: formData.requirement || formData.scope || formData.symptoms || formData.quantity || 'Standard Scope',
+      company: (formData.company || formData.companyName || formData.organization || '').trim() || 'Direct Applicant',
+      service: formData.service || formData.program || formData.course || formData.department || 'Executive Leadership & AI Systems',
+      requirement: formData.requirement || formData.scope || formData.cohort || 'Upcoming 2026/2027 Cohort',
       project_type: formData.project_type || formData.projectType || 'Commercial',
       budget: formData.budget || 'Confidential',
       preferred_date: formData.preferred_date || formData.preferredDate || formData.date || '',
@@ -100,5 +100,44 @@ window.ScaleNovaAPI = (function () {
     };
   }
 
-  return { submitLead };
+  function renderConfirmation(container, result, applicantName) {
+    const subId = result.submission_id || ('SN-D04-' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '-0001');
+    const modal = document.createElement('div');
+    modal.className = 'bloom-modal-overlay';
+    modal.innerHTML = `
+      <div class="bloom-modal-card" style="background:#FFFFFF; border-radius:12px; border:1px solid #D6CEEC; padding:40px; max-width:540px; width:90%; box-shadow:0 24px 64px rgba(45,27,105,0.18); text-align:left; font-family:'Plus Jakarta Sans',sans-serif;">
+        <div style="display:inline-flex; align-items:center; gap:8px; padding:4px 12px; background:#F4EFFE; border-radius:999px; color:#5B21B6; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px;">
+          ✓ Application Dossier Received
+        </div>
+        <h2 style="font-family:'Fraunces',serif; font-size:1.8rem; font-weight:600; color:#1E1242; margin-bottom:8px; line-height:1.2;">
+          Candidate Profile Queued
+        </h2>
+        <p style="color:#5C5578; font-size:0.95rem; line-height:1.6; margin-bottom:24px;">
+          Thank you, <strong>${applicantName || 'Candidate'}</strong>. Your application dossier and academic profile have been officially registered with the Bloombridge Admissions Committee.
+        </p>
+        <div style="background:#F7F5FC; border:1px solid #E5E1FA; border-radius:8px; padding:16px; margin-bottom:24px;">
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#7C3AED; font-weight:700; margin-bottom:4px;">Official Admissions Reference</div>
+          <div style="font-family:'Outfit',sans-serif; font-size:1.15rem; font-weight:700; color:#1E1242; letter-spacing:0.05em;">${subId}</div>
+          <div style="font-size:0.8rem; color:#6B648C; margin-top:6px;">An academic advisor will review your qualifications and contact you within 24 business hours.</div>
+        </div>
+        <button id="closeBloomModal" style="width:100%; padding:14px; background:#2D1B69; color:#FFF; font-weight:600; border:none; border-radius:6px; cursor:pointer; font-size:0.95rem; transition:background 0.2s;">
+          Return to Admissions Portal
+        </button>
+      </div>
+    `;
+    (container || document.body).appendChild(modal);
+    modal.querySelector('#closeBloomModal').addEventListener('click', () => {
+      modal.remove();
+    });
+  }
+
+  const service = { submitLead, renderConfirmation };
+  if (typeof window !== 'undefined') {
+    window.ScaleNovaAPI = service;
+    window.IntegrationService = service;
+  }
+  return service;
 })();
+
+export const IntegrationService = window.ScaleNovaAPI;
+export default window.ScaleNovaAPI;
