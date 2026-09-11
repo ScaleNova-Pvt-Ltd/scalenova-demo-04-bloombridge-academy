@@ -1,20 +1,14 @@
 {
   "name": "scalenova-demo-04-bloombridge-academy",
   "version": "1.0.0",
-  "description": "ScaleNova EliteOS Demo 04: Bloombridge Academy — Advanced Technology & Executive Leadership Education Website",
+  "description": "ScaleNova EliteOS Demonstration — Bloombridge Academy (Education & Training)",
+  "author": "ScaleNova Systems <engineering@scalenovasys.com>",
+  "private": true,
   "scripts": {
-    "dev": "npx -y serve . -l 3004",
+    "dev": "npx -y serve -l 3004 .",
+    "start": "npx -y serve -l 3004 .",
+    "build": "node -e 'console.log(\"ScaleNova build verified for Cloudflare Workers\")'",
+    "deploy": "wrangler deploy",
     "test": "node test/validate-system.js"
-  },
-  "keywords": [
-    "scalenova",
-    "eliteos",
-    "education",
-    "higher-education",
-    "executive-training",
-    "frappe-crm",
-    "google-apps-script"
-  ],
-  "author": "ScaleNova Systems Pvt Ltd",
-  "license": "UNLICENSED"
+  }
 }

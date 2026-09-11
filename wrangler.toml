@@ -1,0 +1,14 @@
+name = "scalenova-demo-04-bloombridge-academy"
+main = "src/worker.js"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "production"
+DEMO_ID = "DEMO-04"
+CLIENT_NAME = "Bloombridge Academy"
+INDUSTRY = "Education & Training"
+PRIMARY_DOMAIN = "demo4.scalenovasys.com"
