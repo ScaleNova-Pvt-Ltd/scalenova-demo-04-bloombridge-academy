@@ -22,17 +22,44 @@
       <nav>
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="programs.html" class="nav-link">Academic Programs</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
           <li><a href="learning-experience.html" class="nav-link">Pedagogy</a></li>
           <li><a href="career-development.html" class="nav-link">Fellowships</a></li>
-          <li><a href="success-stories.html" class="nav-link">Alumni Chairs</a></li>
-          <li><a href="admissions.html" class="nav-link">Admissions</a></li>
           <li><a href="contact.html" class="nav-link">Campuses</a></li>
         </ul>
       </nav>
-      <a href="book-counselling.html" class="btn btn-royal">Book Counselling</a>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <a href="book-counselling.html" class="btn btn-royal" style="padding: 11px 22px; font-size: 0.85rem;">Book Counselling</a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation" onclick="toggleBloombridgeSidePanel()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Slide-Out Mobile App-Like Drawer -->
+  <div class="side-panel-overlay" id="bloombridgeSideOverlay" onclick="toggleBloombridgeSidePanel()"></div>
+  <aside class="side-panel-drawer" id="bloombridgeSideDrawer" aria-label="Mobile Navigation">
+    <div class="side-panel-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="brand-crest" style="width: 32px; height: 32px; font-size: 0.9rem;">BA</div>
+        <span class="brand-name" style="font-size: 1.1rem; color: #FFFFFF;">Bloombridge</span>
+      </div>
+      <button class="side-panel-close" aria-label="Close menu" onclick="toggleBloombridgeSidePanel()">&times;</button>
+    </div>
+    <ul class="side-panel-nav">
+      <li><a href="index.html">Home <span>&rarr;</span></a></li>
+      <li><a href="programs.html">Academic Programs <span>&rarr;</span></a></li>
+      <li><a href="learning-experience.html">Pedagogy & Labs <span>&rarr;</span></a></li>
+      <li><a href="career-development.html">Fellowships & Placement <span>&rarr;</span></a></li>
+      <li><a href="success-stories.html">Alumni Chairs <span>&rarr;</span></a></li>
+      <li><a href="admissions.html">Admissions Criteria <span>&rarr;</span></a></li>
+      <li><a href="contact.html">Campuses & Visits <span>&rarr;</span></a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 24px;">
+      <a href="book-counselling.html" class="btn btn-royal" style="width: 100%; text-align: center; padding: 14px;">Book Academic Counselling &rarr;</a>
+    </div>
+  </aside>
 
   <main style="padding-top: var(--header-height);">
     <!-- Editorial Hero: Human-Centered Academic Photography -->
@@ -73,8 +100,24 @@
             </div>
           </div>
 
-          <!-- Academic Visual Spread -->
-          <div style="position: relative;">
+          <!-- Academic Visual Spread with 3D Badges -->
+          <div style="position: relative;" class="hero-media-wrap">
+            <div class="floating-academic-badge" style="top: 18px; right: 18px;">
+              <span style="font-size: 1.2rem; color: var(--bb-academic-gold);">🎓</span>
+              <div>
+                <div style="font-family: var(--font-meta); font-size: 0.7rem; color: var(--bb-text-light); text-transform: uppercase;">Faculty Ratio</div>
+                <div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--bb-oxford-midnight);">1 : 8 Mentorship</div>
+              </div>
+            </div>
+
+            <div class="floating-academic-badge" style="bottom: 24px; right: 18px; animation-delay: -3s;">
+              <span style="font-size: 1.2rem; color: #10B981;">🏛</span>
+              <div>
+                <div style="font-family: var(--font-meta); font-size: 0.7rem; color: var(--bb-text-light); text-transform: uppercase;">Placement Track</div>
+                <div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--bb-oxford-midnight);">88% Leadership Chairs</div>
+              </div>
+            </div>
+
             <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(45, 27, 105, 0.14); border: 1px solid var(--bb-border);">
               <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" 
                    alt="Bloombridge Academy seminar room and student research fellows" 
@@ -84,7 +127,6 @@
               <div style="font-family: var(--font-meta); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--bb-rose-accent); font-weight: 700;">Fellowship Highlight</div>
               <div style="font-family: var(--font-display); font-size: 1.05rem; color: var(--bb-oxford-midnight); margin-top: 4px; font-weight: 600;">Autonomous Systems & Governance Seminar</div>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -297,5 +339,23 @@
       </div>
     </div>
   </footer>
+  <script src="src/config/index.js"></script>
+  <script src="src/services/api.js"></script>
+  <script>
+    function toggleBloombridgeSidePanel() {
+      const drawer = document.getElementById('bloombridgeSideDrawer');
+      const overlay = document.getElementById('bloombridgeSideOverlay');
+      const isOpen = drawer.classList.contains('active');
+      if (isOpen) {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('side-panel-open');
+      } else {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        document.body.classList.add('side-panel-open');
+      }
+    }
+  </script>
 </body>
 </html>
