@@ -1,82 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bloombridge.scalenova.com/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://bloombridge.scalenova.com/programs.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/about</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/program-detail.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/admissions</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/career-development.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/book-counselling</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/learning-experience.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/career-development</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/success-stories.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/contact</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/admissions.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/tuition-plans.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/insights</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/insights.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/learning-experience</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/about.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/privacy</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/contact.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/program-detail</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/book-counselling.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/programs</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bloombridge.scalenova.com/privacy.html</loc>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/success-stories</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/terms</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-04-bloombridge-academy.ranam.workers.dev/tuition-plans</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
