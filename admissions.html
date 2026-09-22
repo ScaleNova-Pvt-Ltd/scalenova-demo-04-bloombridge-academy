@@ -3,79 +3,382 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admissions Criteria & Scholarships — Bloombridge Academy</title>
-  <meta name="description" content="Selective admission standards, corporate sponsorship guidelines, and diversity in engineering fellowship grants.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
+  <title>Admissions Governance & Criteria — Bloombridge Academy</title>
+  <meta name="description" content="Selective admission standards, corporate sponsorship guidelines, and merit fellowship grants. Acceptance rate maintained under 18%.">
+  <meta name="keywords" content="tech executive admissions, engineering fellowship criteria, corporate L&D sponsorship, tech grants India">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Admissions Governance & Criteria — Bloombridge Academy">
+  <meta property="og:description" content="Selective admission standards preserving the rigorous caliber of discussion across cohorts.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalProgram",
+    "name": "Bloombridge Academy Admissions Governance",
+    "description": "Selective admissions criteria and corporate sponsorship pathways.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Bloombridge Academy"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23800020'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Scholastic Matrix Canvas -->
+  <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: #1E1B4B; color: #EDE9FE; padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%;"></span>
+        <span>SELECTIVE ADMISSIONS</span> &bull; 16.4% Acceptance Rate &bull; Rolling 48-Hour Evaluations
+      </div>
+      <div>
+        <a href="tuition-plans.html" style="color: #F59E0B; text-decoration: none; margin-right: 16px; font-weight: 600;">Sponsorship Plans &rarr;</a>
+        Admissions: <a href="tel:+918069128800" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6912 8800</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-badge">BA</div><div class="brand-name">Bloombridge Academy</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="career-development.html" class="nav-link">Career</a></li>
-        <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
-        <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
-        <li><a href="admissions.html" class="nav-link active">Admissions</a></li>
-        <li><a href="insights.html" class="nav-link">Research</a></li>
-        <li><a href="contact.html" class="nav-link">Campuses</a></li>
-      </ul></nav>
-      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 20px;">Apply Now</a>
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
+        <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+        <div>
+          <div class="brand-name" style="font-weight: 700; color: #1E1B4B; font-size: 1.15rem;">Bloombridge Academy</div>
+          <div style="font-size: 0.68rem; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase;">Institute of Advanced Technology & Leadership</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="career-development.html" class="nav-link">Career</a></li>
+          <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
+          <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
+          <li><a href="admissions.html" class="nav-link active">Admissions</a></li>
+          <li><a href="tuition-plans.html" class="nav-link">Tuition</a></li>
+          <li><a href="insights.html" class="nav-link">Research</a></li>
+          <li><a href="contact.html" class="nav-link">Campuses</a></li>
+        </ul>
+      </nav>
+      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 22px; font-size: 0.85rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">Apply Now</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 56px;">
-        <span class="eyebrow">Selection Governance</span>
-        <h1>Admissions Standards & Sponsorships</h1>
-        <p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.7; margin-top: 16px;">
-          Bloombridge maintains an acceptance rate under 18% to preserve the rigorous caliber of discussion across cohorts.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: #800020; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">SELECTION GOVERNANCE</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.3rem, 5vw, 3.4rem); color: #1E1B4B; line-height: 1.15; margin: 12px 0 16px;">
+          Admissions Standards & Sponsorships
+        </h1>
+        <p style="font-size: 1.15rem; color: #64748B; line-height: 1.8; max-width: 760px;">
+          Bloombridge maintains an acceptance rate under 18% to preserve the rigorous caliber of discussion across cohorts. We look for practitioners eager to challenge orthodoxies and contribute to peer war-rooms.
         </p>
       </div>
 
-      <div class="grid-3" style="margin-bottom: 56px;">
-        <div class="program-card">
-          <span class="cohort-tag">STAGE 1</span>
-          <h3>Technical Profile Screening</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 8px;">
-            Submission of your professional GitHub, technical portfolio, or architecture whitepaper showcasing 4+ years of hands-on engineering or technical leadership.
-          </p>
+      <!-- KPI Stat Ribbon -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="16.4" data-suffix="%">16.4%</div>
+          <div class="kpi-label">Audited Cohort Acceptance Rate</div>
         </div>
-        <div class="program-card">
-          <span class="cohort-tag">STAGE 2</span>
-          <h3>Faculty Technical Discussion</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 8px;">
-            A 30-minute technical dialogue with a member of our teaching faculty evaluating problem-solving intuition and alignment with cohort objectives.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="48" data-suffix=" Hours">48 Hours</div>
+          <div class="kpi-label">Application Evaluation Turnaround</div>
         </div>
-        <div class="program-card">
-          <span class="cohort-tag">STAGE 3</span>
-          <h3>Admissions Offer & Onboarding</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 8px;">
-            Formal cohort admission letter issued within 48 hours, along with private cloud compute credentials and pre-cohort preparation materials.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="4" data-suffix="+ Yrs">4+ Yrs</div>
+          <div class="kpi-label">Minimum Professional Engineering Experience</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-prefix="₹" data-counter="65" data-suffix=",000">₹65,000</div>
+          <div class="kpi-label">Max Merit Fellowship Grant Allocation</div>
         </div>
       </div>
 
-      <div class="program-card" style="padding: 40px; text-align: center;">
-        <h2>Ready for Admissions Review?</h2>
-        <p style="color: var(--color-text-muted); margin: 12px auto 24px auto; max-width: 600px;">
-          Submit your profile today for fast-track review. Scholarship applications close 10 days before cohort commencement.
+      <!-- Interactive Admissions Gate Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">SELECTION PROTOCOL</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            The 3-Stage Evaluation Gate
+          </h2>
+          <p style="color: #64748B; font-size: 0.95rem;">A transparent and respectful review process designed for working senior professionals.</p>
+        </div>
+
+        <div class="tech-switcher">
+          <div class="switcher-nav">
+            <button class="switcher-btn active" data-target="gate-screening">Stage 1: Portfolio & Architecture Audit</button>
+            <button class="switcher-btn" data-target="gate-interview">Stage 2: Faculty Socratic Dialogue (30 min)</button>
+            <button class="switcher-btn" data-target="gate-decision">Stage 3: Cohort Decision & Credentialing</button>
+          </div>
+
+          <div class="switcher-content">
+            <!-- Stage 1 -->
+            <div class="switcher-panel active" id="gate-screening">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">INITIAL REVIEW &bull; 24 HOURS</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Technical Background & Architecture Audit</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-admissions-rubric" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">View Evaluation Rubric &rarr;</button>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Submit your LinkedIn profile, GitHub repository links, or de-identified system design artifacts. Our admissions committee evaluates engineering depth, track record of shipping to production, and readiness for executive systems leadership.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Submission Elements</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">LinkedIn + Recent Architecture Brief</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Review Criteria</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Hands-On Production Complexity</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Turnaround</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Email Notice Within 24 Hours</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="switcher-panel" id="gate-interview">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">FACULTY DIALOGUE &bull; 30 MIN</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Technical Socratic Case Discussion</h3>
+                </div>
+                <a href="book-counselling.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Schedule Faculty Slot &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                A peer-to-peer technical dialogue with a member of our senior teaching faculty (acting VP of Eng or Principal Architect). No LeetCode puzzles. We discuss real trade-offs: CAP theorem, GPU memory limits, or organizational refactoring.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Interview Focus</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">System Design & Cognitive Curiosity</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Format</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">1-on-1 Confidential Video Call</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Preparation</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Zero Memorization Required</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="switcher-panel" id="gate-decision">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">ONBOARDING & ACCREDITATION</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Admissions Decision & Compute Credentials</h3>
+                </div>
+                <a href="tuition-plans.html" class="btn btn-violet" style="padding: 8px 16px; font-size: 0.8rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">View Tuition & Corporate Invoicing &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Admitted fellows receive their formal cohort invitation, dedicated GPU cluster access keys, private Slack/Discord syndicate invite, and pre-cohort asynchronous preparation materials.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Offer Window</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">7 Days Seat Reservation Period</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Corporate Sponsorship</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">GST Invoices & L&D Documentation</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Pre-Course Setup</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">GPU Sandbox Credentialing Immediate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Sponsorship & Funding Channels (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">FINANCIAL SPONSORSHIPS</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            Funding & Corporate Pathways
+          </h2>
+        </div>
+
+        <div class="grid-2">
+          <!-- Card 1 -->
+          <div class="program-card tilt-card" data-modal="modal-admissions-rubric">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">ENTERPRISE L&D</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Corporate Sponsorship Invoicing</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Over 65% of our fellows receive full or partial funding from enterprise L&D budgets. We provide comprehensive business case templates and direct corporate invoicing.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">GST Invoicing</span>
+              <span class="chip">L&D Business Case</span>
+            </div>
+            <a href="tuition-plans.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Download Corporate Pitch Deck &rarr;</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">MERIT GRANTS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Women in Technology Leadership Grants</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Merit-based scholarships awarding up to 30% tuition waivers for women engineering leaders stepping into Staff, VP, and CTO roles.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Up to 30% Waiver</span>
+              <span class="chip">Executive Mentorship</span>
+            </div>
+            <a href="book-counselling.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Inquire on Grant Allocation &rarr;</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">FLEXIBLE FINANCING</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Zero-Interest 6 & 12 Month EMI</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Partnered with premier banking institutions to provide instant zero-cost monthly installments starting from ₹22,500/month.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Zero Interest</span>
+              <span class="chip">Instant Approval</span>
+            </div>
+            <a href="tuition-plans.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View EMI Calculators &rarr;</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">VENTURE FOUNDERS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Pre-Seed Founder Fellowships</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              For technical founders building early deep-tech MVPs. Includes compute credits, capstone investor showcase, and syndicate access.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Investor Showcase</span>
+              <span class="chip">Compute Grants</span>
+            </div>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Apply as Founder &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application CTA Banner -->
+      <div style="background: #1E1B4B; color: #EDE9FE; border-radius: 12px; padding: 48px; border: 1px solid rgba(124, 58, 237, 0.3); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: #F59E0B; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;">APPLY FOR CURRENT COHORT</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Begin Your Application
+        </h2>
+        <p style="color: #C4B5FD; max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          Applications for the Fall 2026 Cohort are reviewed in the order received. Early applicants receive priority compute quota reservations.
         </p>
-        <a href="book-counselling.html" class="btn btn-violet" style="padding: 14px 32px;">Start Your Application &rarr;</a>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600;">Start Technical Application</a>
+          <a href="programs.html" class="btn btn-outline" style="color: #EDE9FE; border-color: rgba(255,255,255,0.3); padding: 12px 28px; border-radius: 6px; text-decoration: none;">Review Program Catalog</a>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Bloombridge Academy Ltd. All rights reserved.</div>
-      <div style="color: var(--color-rose-accent);">ScaleNova EliteOS Demo Platform</div>
+  <!-- Modal: Admissions Rubric -->
+  <div class="modal-overlay" id="modal-admissions-rubric" role="dialog" aria-modal="true" aria-labelledby="modal-rubric-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #800020; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">ACCREDITATION RUBRIC</span>
+          <h3 id="modal-rubric-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: #1E1B4B; margin-top: 4px;">Faculty Admissions Evaluation Dimensions</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+          Candidates are scored across four dimensions during the 30-minute faculty dialogue:
+        </p>
+        <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 700; color: #1E1B4B; margin-bottom: 8px;">Scoring Dimensions:</div>
+          <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+            &bull; <strong>Architectural Intuition (35%):</strong> Ability to articulate tradeoffs (latency vs. consistency, cloud costs vs. velocity)<br>
+            &bull; <strong>Production Pedigree (25%):</strong> Experience operating high-scale software with active users and SLA guarantees<br>
+            &bull; <strong>Socratic Contribution (25%):</strong> Willingness to actively challenge and constructively critique peer architectures<br>
+            &bull; <strong>Leadership Trajectory (15%):</strong> Clarity of intent regarding the Principal Engineer or VP/CTO career leap
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 10px 20px; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">Book Dialogue Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background: #0F0D24; color: #C4B5FD; padding: 64px 0 32px; border-top: 1px solid rgba(124, 58, 237, 0.2);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+            <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+            <div class="brand-name" style="color: #FFF; font-weight: 700;">Bloombridge Academy</div>
+          </div>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.8; max-width: 320px;">
+            Accelerating the trajectory of elite engineers and technology leaders through high-rigor executive masterclasses.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Masterclasses</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">AI & Autonomous Agents</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Ultra-Low Latency FinTech</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">The Executive CTO Track</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Enterprise MLOps & Inference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Admissions</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="admissions.html" style="color: inherit; text-decoration: none;">Admissions Process</a></li>
+            <li><a href="tuition-plans.html" style="color: inherit; text-decoration: none;">Tuition & Corporate Grants</a></li>
+            <li><a href="book-counselling.html" style="color: inherit; text-decoration: none;">Book Counselling Call</a></li>
+            <li><a href="success-stories.html" style="color: inherit; text-decoration: none;">Alumni Career Outcomes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Institution</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Academic Philosophy</a></li>
+            <li><a href="learning-experience.html" style="color: inherit; text-decoration: none;">Campus & Lab Experience</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Technical Research Blog</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Bloombridge Academy. ScaleNova EducationOS Client Platform.</div>
+        <div>Campuses: Bangalore &bull; Hyderabad &bull; Singapore &bull; Remote Hybrid</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/skills-matrix.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

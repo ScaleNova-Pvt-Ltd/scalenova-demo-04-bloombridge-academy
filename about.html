@@ -5,62 +5,355 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Bloombridge Academy — Academic Governance & Faculty</title>
   <meta name="description" content="Our faculty council comprises former Silicon Valley engineering heads, distinguished research scientists, and unicorn startup CTOs.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
+  <meta name="keywords" content="Bloombridge Academy faculty, tech leadership institute, AI executive board, technology education India">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Bloombridge Academy — Academic Governance & Faculty">
+  <meta property="og:description" content="Education engineered for the technological frontier. Taught exclusively by active industry leaders.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Bloombridge Academy",
+    "description": "Institute of Advanced Technology & Executive Leadership.",
+    "foundingDate": "2021",
+    "url": "https://bloombridge.scalenova.com"
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23800020'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Scholastic Matrix Canvas -->
+  <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: #1E1B4B; color: #EDE9FE; padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%;"></span>
+        <span>ACADEMIC GOVERNANCE</span> &bull; Faculty Council &bull; Bangalore &bull; Singapore
+      </div>
+      <div>
+        <a href="programs.html" style="color: #F59E0B; text-decoration: none; margin-right: 16px; font-weight: 600;">Explore Curricula &rarr;</a>
+        Admissions: <a href="tel:+918069128800" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6912 8800</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-badge">BA</div><div class="brand-name">Bloombridge Academy</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About</a></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="career-development.html" class="nav-link">Career</a></li>
-        <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
-        <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
-        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-        <li><a href="insights.html" class="nav-link">Research</a></li>
-        <li><a href="contact.html" class="nav-link">Campuses</a></li>
-      </ul></nav>
-      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 20px;">Apply Now</a>
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
+        <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+        <div>
+          <div class="brand-name" style="font-weight: 700; color: #1E1B4B; font-size: 1.15rem;">Bloombridge Academy</div>
+          <div style="font-size: 0.68rem; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase;">Institute of Advanced Technology & Leadership</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="career-development.html" class="nav-link">Career</a></li>
+          <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
+          <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
+          <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+          <li><a href="tuition-plans.html" class="nav-link">Tuition</a></li>
+          <li><a href="insights.html" class="nav-link">Research</a></li>
+          <li><a href="contact.html" class="nav-link">Campuses</a></li>
+        </ul>
+      </nav>
+      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 22px; font-size: 0.85rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">Apply Now</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 56px;">
-        <span class="eyebrow">Academic Foundation</span>
-        <h1>Education Engineered for the Frontier</h1>
-        <p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.7; margin-top: 16px;">
-          Traditional universities move in 5-year curriculum cycles; modern technology evolves in 90-day sprints. Bloombridge bridges this gap with living curricula updated continuously by active practitioners.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: #800020; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">INSTITUTIONAL FOUNDATION</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.3rem, 5vw, 3.4rem); color: #1E1B4B; line-height: 1.15; margin: 12px 0 16px;">
+          Education Engineered for the Frontier
+        </h1>
+        <p style="font-size: 1.15rem; color: #64748B; line-height: 1.8; max-width: 760px;">
+          Traditional universities move in 5-year curriculum cycles; modern production software evolves in 90-day sprints. Bloombridge bridges this gap with living curricula updated continuously by active industry practitioners.
         </p>
       </div>
 
-      <div class="grid-2">
-        <div class="program-card">
-          <span class="cohort-tag">FACULTY COUNCIL</span>
-          <h3>Practitioners, Not Lecturers</h3>
-          <p style="color: var(--color-text-muted); line-height: 1.7; margin-top: 8px;">
-            Every masterclass is led by practitioners who have scaled real-world distributed architectures, trained proprietary frontier models, and managed global engineering budgets.
-          </p>
+      <!-- KPI Stat Ribbon -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="2021">2021</div>
+          <div class="kpi-label">Institute Founding Year</div>
         </div>
-        <div class="program-card">
-          <span class="cohort-tag">PRODUCTION RIGOR</span>
-          <h3>Zero Toy Sandboxes</h3>
-          <p style="color: var(--color-text-muted); line-height: 1.7; margin-top: 8px;">
-            Fellows build against multi-cluster Kubernetes environments, production vector databases, and real transaction feeds with chaotic latency injections.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="24">24</div>
+          <div class="kpi-label">Resident Distinguished Faculty & Fellows</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="100" data-suffix="%">100%</div>
+          <div class="kpi-label">Faculty Currently Active in Industry</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="850" data-suffix="+">850+</div>
+          <div class="kpi-label">Global Executive Technology Alumni</div>
+        </div>
+      </div>
+
+      <!-- Interactive Tenets Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">INSTITUTIONAL CREED</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            The Three Inviolable Tenets
+          </h2>
+          <p style="color: #64748B; font-size: 0.95rem;">Guiding principles that differentiate Bloombridge from academic theory and shallow bootcamps.</p>
+        </div>
+
+        <div class="tech-switcher">
+          <div class="switcher-nav">
+            <button class="switcher-btn active" data-target="about-practitioners">01 Practitioners, Never Pure Lecturers</button>
+            <button class="switcher-btn" data-target="about-production">02 Zero Toy Sandboxes</button>
+            <button class="switcher-btn" data-target="about-living">03 The 90-Day Living Curriculum</button>
+          </div>
+
+          <div class="switcher-content">
+            <!-- Tenet 1 -->
+            <div class="switcher-panel active" id="about-practitioners">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">INDUSTRY BATTLE-TESTED</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Taught Exclusively by Active Senior Leaders</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-dean" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">View Dean's Monograph &rarr;</button>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Every masterclass is designed and led by practitioners who manage live multi-million dollar cloud budgets, train frontier models, or govern algorithmic trading desks. No career academics teaching outdated textbook theories.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Faculty Pedigree</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Ex-DeepMind, Stripe, AWS, Goldman</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Teaching Model</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Interactive Socratic Case Method</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Mentorship Ratio</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">1:8 High-Bandwidth Engagement</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tenet 2 -->
+            <div class="switcher-panel" id="about-production">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">REAL COMPUTING CLUSTERS</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Zero Toy Sandboxes & Fake Datasets</h3>
+                </div>
+                <a href="learning-experience.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Inspect Studio Labs &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Toy Jupyter notebooks that run on local laptops teach bad habits. Bloombridge provisions dedicated 8x NVIDIA H100 SXM5 nodes, high-throughput distributed message queues, and chaos injection suites for every project deliverable.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Compute Tier</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">NVIDIA H100 SXM5 80GB Pods</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Traffic Scales</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">100k+ Synthetic QPS Stress Tests</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Telemetry</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Datadog Distributed Flamegraphs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tenet 3 -->
+            <div class="switcher-panel" id="about-living">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">CONTINUOUS REFACTORING</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">The 90-Day Living Curriculum Cycle</h3>
+                </div>
+                <a href="insights.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Read Technical Insights &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Curricula are governed like open-source software with continuous pull requests. Every quarter, modules are audited against frontier open-weights advancements, new Linux kernel eBPF primitives, and evolving GPU cluster runtimes.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Update Cadence</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Quarterly Major Release (v4.2 Active)</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Advisory Council</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">12 Tech Unicorn CTOs & Heads of AI</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Alumni Access</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Lifetime Syllabus Git Access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faculty Council (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">ACADEMIC CHAIRS</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            The Faculty Council
+          </h2>
+        </div>
+
+        <div class="grid-3">
+          <!-- Member 1 -->
+          <div class="program-card tilt-card" data-modal="modal-dean">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">DEAN OF AI ARCHITECTURE</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 4px;">Dr. Arvind Swaminathan</h3>
+            <div style="font-size: 0.82rem; color: #800020; font-weight: 600; margin-bottom: 12px;">Ph.D. IISc &bull; Ex-Research Scientist DeepMind</div>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              Pioneered agentic planning architectures and distributed LLM fine-tuning techniques on trillion-token datasets.
+            </p>
+            <a href="javascript:void(0)" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Faculty Dossier &rarr;</a>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">CHAIR OF FINTECH & LOW-LATENCY</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 4px;">Ananya Deshmukh</h3>
+            <div style="font-size: 0.82rem; color: #800020; font-weight: 600; margin-bottom: 12px;">Ex-Chief Architect, Tier-1 Investment Bank</div>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              18 years engineering sub-microsecond matching engines and distributed consensus mechanisms across London and Mumbai.
+            </p>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Explore FinTech Track &rarr;</a>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">EXECUTIVE CTO IN RESIDENCE</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 4px;">Rajesh Khanna</h3>
+            <div style="font-size: 0.82rem; color: #800020; font-weight: 600; margin-bottom: 12px;">3x Venture CTO &bull; Peak XV Advisor</div>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              Scaled engineering teams from 10 to 450+ across two successful exits. Chairs the weekly boardroom simulation clinics.
+            </p>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Explore CTO Track &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application CTA Banner -->
+      <div style="background: #1E1B4B; color: #EDE9FE; border-radius: 12px; padding: 48px; border: 1px solid rgba(124, 58, 237, 0.3); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: #F59E0B; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;">ACADEMIC CONSULTATION</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Engage with the Faculty Council
+        </h2>
+        <p style="color: #C4B5FD; max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          Schedule an informal 20-minute conversation with our academic directors to review your background and identify the right specialization.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600;">Schedule Academic Review</a>
+          <a href="contact.html" class="btn btn-outline" style="color: #EDE9FE; border-color: rgba(255,255,255,0.3); padding: 12px 28px; border-radius: 6px; text-decoration: none;">View Campus Studios</a>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Bloombridge Academy Ltd. All rights reserved.</div>
-      <div style="color: var(--color-rose-accent);">ScaleNova EliteOS Demo Platform</div>
+  <!-- Modal: Dean Swaminathan Monograph -->
+  <div class="modal-overlay" id="modal-dean" role="dialog" aria-modal="true" aria-labelledby="modal-dean-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #800020; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">FACULTY MONOGRAPH</span>
+          <h3 id="modal-dean-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: #1E1B4B; margin-top: 4px;">Dr. Arvind Swaminathan — Dean of AI</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+          "The biggest failure of contemporary engineering education is reducing generative AI to API calls. True technical leadership demands an intuitive grasp of KV-cache memory bandwidth, multi-agent state space convergence, and quantization trade-offs."
+        </p>
+        <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 700; color: #1E1B4B; margin-bottom: 8px;">Faculty Credentials & Research:</div>
+          <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+            &bull; <strong>Research Focus:</strong> Memory-budgeted autoregressive inference & speculative decoding<br>
+            &bull; <strong>Publications:</strong> 14 NeurIPS/ICML citations on distributed neural training<br>
+            &bull; <strong>Industry Impact:</strong> Guided AI platform modernization for 4 Indian unicorns<br>
+            &bull; <strong>Fellowship Role:</strong> Leads Saturday Socratic War-Rooms in AI Architecture
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 10px 20px; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">Book Meeting with Dr. Swaminathan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background: #0F0D24; color: #C4B5FD; padding: 64px 0 32px; border-top: 1px solid rgba(124, 58, 237, 0.2);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+            <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+            <div class="brand-name" style="color: #FFF; font-weight: 700;">Bloombridge Academy</div>
+          </div>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.8; max-width: 320px;">
+            Accelerating the trajectory of elite engineers and technology leaders through high-rigor executive masterclasses.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Masterclasses</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">AI & Autonomous Agents</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Ultra-Low Latency FinTech</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">The Executive CTO Track</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Enterprise MLOps & Inference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Admissions</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="admissions.html" style="color: inherit; text-decoration: none;">Admissions Process</a></li>
+            <li><a href="tuition-plans.html" style="color: inherit; text-decoration: none;">Tuition & Corporate Grants</a></li>
+            <li><a href="book-counselling.html" style="color: inherit; text-decoration: none;">Book Counselling Call</a></li>
+            <li><a href="success-stories.html" style="color: inherit; text-decoration: none;">Alumni Career Outcomes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Institution</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Academic Philosophy</a></li>
+            <li><a href="learning-experience.html" style="color: inherit; text-decoration: none;">Campus & Lab Experience</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Technical Research Blog</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Bloombridge Academy. ScaleNova EducationOS Client Platform.</div>
+        <div>Campuses: Bangalore &bull; Hyderabad &bull; Singapore &bull; Remote Hybrid</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/skills-matrix.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

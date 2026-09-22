@@ -3,64 +3,411 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Learning Experience — Bloombridge Academy</title>
-  <meta name="description" content="Inside the Bloombridge hybrid executive studio model: high-bandwidth discussions, live coding clinics, and dedicated GPU sandboxes.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
+  <title>The Studio Learning Experience — Bloombridge Academy</title>
+  <meta name="description" content="Inside the Bloombridge executive studio model: high-bandwidth Socratic discussions, production architecture war-rooms, and dedicated H100 GPU clusters.">
+  <meta name="keywords" content="executive studio education, engineering war rooms, AI sandbox H100, Socratic engineering method">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Studio Learning Experience — Bloombridge Academy">
+  <meta property="og:description" content="No passive pre-recorded lecture dumps. Live weekend systems architecture war-rooms and GPU sandboxes.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalProgram",
+    "name": "Bloombridge Academy Executive Studio Methodology",
+    "description": "High-bandwidth interactive technical learning for senior engineering fellows.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Bloombridge Academy"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23800020'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Scholastic Matrix Canvas -->
+  <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: #1E1B4B; color: #EDE9FE; padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%;"></span>
+        <span>STUDIO PEDAGOGY</span> &bull; 100% Live Socratic Sessions &bull; 8x H100 Cluster Pods
+      </div>
+      <div>
+        <a href="programs.html" style="color: #F59E0B; text-decoration: none; margin-right: 16px; font-weight: 600;">Explore Syllabi &rarr;</a>
+        Admissions: <a href="tel:+918069128800" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6912 8800</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-badge">BA</div><div class="brand-name">Bloombridge Academy</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="career-development.html" class="nav-link">Career</a></li>
-        <li><a href="learning-experience.html" class="nav-link active">Experience</a></li>
-        <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
-        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-        <li><a href="insights.html" class="nav-link">Research</a></li>
-        <li><a href="contact.html" class="nav-link">Campuses</a></li>
-      </ul></nav>
-      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 20px;">Apply Now</a>
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
+        <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+        <div>
+          <div class="brand-name" style="font-weight: 700; color: #1E1B4B; font-size: 1.15rem;">Bloombridge Academy</div>
+          <div style="font-size: 0.68rem; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase;">Institute of Advanced Technology & Leadership</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="career-development.html" class="nav-link">Career</a></li>
+          <li><a href="learning-experience.html" class="nav-link active">Experience</a></li>
+          <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
+          <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+          <li><a href="tuition-plans.html" class="nav-link">Tuition</a></li>
+          <li><a href="insights.html" class="nav-link">Research</a></li>
+          <li><a href="contact.html" class="nav-link">Campuses</a></li>
+        </ul>
+      </nav>
+      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 22px; font-size: 0.85rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">Apply Now</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 56px;">
-        <span class="eyebrow">Studio Methodology</span>
-        <h1>The Hybrid Executive Studio Model</h1>
-        <p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.7; margin-top: 16px;">
-          No passive pre-recorded lecture dumps. Our fellows participate in live, provocative weekend case clinics and private cloud architectural war-rooms.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: #800020; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">STUDIO METHODOLOGY</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.3rem, 5vw, 3.4rem); color: #1E1B4B; line-height: 1.15; margin: 12px 0 16px;">
+          The Studio Learning Experience
+        </h1>
+        <p style="font-size: 1.15rem; color: #64748B; line-height: 1.8; max-width: 760px;">
+          Zero passive pre-recorded lecture dumps. Our fellows participate in live, provocative weekend architecture war-rooms, live incident post-mortems, and private GPU compute pods.
         </p>
       </div>
 
-      <div class="grid-2">
-        <div class="program-card">
-          <span class="cohort-tag">INFRASTRUCTURE ACCESS</span>
-          <h3>Enterprise Cloud & GPU Quotas</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7;">
-            Every fellow receives direct access to NVIDIA H100/A100 GPU compute clusters, enterprise vector databases, and distributed tracing suites at zero additional cost.
-          </p>
+      <!-- KPI Stat Ribbon -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="100" data-suffix="%">100%</div>
+          <div class="kpi-label">Live Socratic Discussions</div>
         </div>
-        <div class="program-card">
-          <span class="cohort-tag">PEER COHORTS</span>
-          <h3>Caliber of the Room</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7;">
-            Learn alongside Lead Architects, Staff Engineers, and Engineering Directors from top global companies. The cohort peer network becomes a lifelong professional board of advisors.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-prefix="8x " data-suffix=" H100">8x H100</div>
+          <div class="kpi-label">Dedicated GPU Cluster Sandboxes</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="10" data-suffix="+ Yrs">10+ Yrs</div>
+          <div class="kpi-label">Average Cohort Experience Level</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="4.9" data-suffix=" / 5.0">4.9 / 5.0</div>
+          <div class="kpi-label">Audited Fellow Satisfaction Score</div>
+        </div>
+      </div>
+
+      <!-- Interactive Cadence Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">WEEKLY PEDAGOGY</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            The 4-Stage Fellowship Rhythm
+          </h2>
+          <p style="color: #64748B; font-size: 0.95rem;">Designed for working senior practitioners without disrupting intense weekly executive schedules.</p>
+        </div>
+
+        <div class="tech-switcher">
+          <div class="switcher-nav">
+            <button class="switcher-btn active" data-target="cadence-briefing">01 Friday Asynch RFC Briefing</button>
+            <button class="switcher-btn" data-target="cadence-warroom">02 Saturday Socratic War-Room</button>
+            <button class="switcher-btn" data-target="cadence-lab">03 Sunday Production Lab Clinic</button>
+            <button class="switcher-btn" data-target="cadence-officehours">04 Mid-Week 1-on-1 Office Hours</button>
+          </div>
+
+          <div class="switcher-content">
+            <!-- Cadence 1 -->
+            <div class="switcher-panel active" id="cadence-briefing">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">SELF-PACED PREPARATION</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Curated Enterprise RFCs & Architecture Briefs</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-sandbox" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Inspect Lab Quotas &rarr;</button>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Receive real-world architectural design documents and production outage transcripts from hyperscalers (Stripe, Uber, Meta). Analyze trade-offs, fault trees, and design choices prior to the live weekend session.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Time Commitment</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">90 Minutes Self-Study</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Material Caliber</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Declassified Production RFCs</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Asynchronous Platform</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Private GitHub Enterprise Repos</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cadence 2 -->
+            <div class="switcher-panel" id="cadence-warroom">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">LIVE WEEKEND INTENSIVE</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Saturday Socratic Systems War-Room</h3>
+                </div>
+                <a href="book-counselling.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Join as Guest Observer &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                3.5 hours of high-intensity, moderated peer debate. Faculty chairs dissect microkernel bottlenecks, vector indexing failure modes, and distributed split-brain scenarios with fellows actively defending their architectural recommendations.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Session Length</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">10:00 AM – 1:30 PM IST</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Pedagogy</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Harvard/MIT Socratic Case Method</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Attendance</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Mandatory Active Camera & Audio</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cadence 3 -->
+            <div class="switcher-panel" id="cadence-lab">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">HANDS-ON COMPUTING</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Sunday Production Lab Clinic</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-sandbox" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">View GPU Lab Specs &rarr;</button>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Hands on keyboards. Fellows deploy live code to private Kubernetes GPU clusters: profiling Triton inference latency, injecting network partitions with Chaos Mesh, or compiling zero-copy socket buffers in Rust.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Session Length</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">2:00 PM – 5:30 PM IST</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Deliverable</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Verified Production Pull Request</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Teaching Assistants</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">1:6 Dedicated Staff Support</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cadence 4 -->
+            <div class="switcher-panel" id="cadence-officehours">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">INDIVIDUAL ADVISORY</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">Mid-Week 1-on-1 Faculty Office Hours</h3>
+                </div>
+                <a href="book-counselling.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Schedule Advisory &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                45 minutes of confidential, personalized review each Wednesday or Thursday. Debug complex distributed race conditions, review company internal system designs under NDA, or prepare for upcoming C-suite board presentations.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Confidentiality</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Full NDA Protected</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Faculty Access</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Direct WhatsApp & Slack Channels</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Career Advisory</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Executive Salary Review Included</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Pillars of Learning (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">ENVIRONMENTAL EXCELLENCE</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            The Studio Infrastructure
+          </h2>
+        </div>
+
+        <div class="grid-2">
+          <!-- Card 1 -->
+          <div class="program-card tilt-card" data-modal="modal-sandbox">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">COMPUTE QUOTAS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Enterprise Cloud & GPU Quotas</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Every fellow receives dedicated access to NVIDIA H100/A100 clusters, Pinecone enterprise vector databases, and Datadog tracing.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Zero Cloud Bills</span>
+              <span class="chip">H100 GPU Pods</span>
+            </div>
+            <a href="javascript:void(0)" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Quota Specifications &rarr;</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">PEER CALIBER</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">The Caliber of the Room</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Learn alongside Lead Architects, Staff Engineers, and Engineering Directors from Amazon, Swiggy, and Microsoft.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Selective Admissions</span>
+              <span class="chip">High-Bandwidth Network</span>
+            </div>
+            <a href="success-stories.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Explore Fellow Profiles &rarr;</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">SIMULATION</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Live Chaos Game-Days</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Experience unannounced production database split-brains, network black-holes, and latency cascading simulations in real time.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Chaos Mesh</span>
+              <span class="chip">Live Fire Drills</span>
+            </div>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Simulation Scenarios &rarr;</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">RESIDENCY</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Bangalore & Hyderabad Studio Campuses</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+              Participate in person at our state-of-the-art studio facilities or join remotely with 4K broadcast camera arrays and high-fidelity spatial audio.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Hybrid Fluidity</span>
+              <span class="chip">Physical Studio Hubs</span>
+            </div>
+            <a href="contact.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Campus Locations &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application CTA Banner -->
+      <div style="background: #1E1B4B; color: #EDE9FE; border-radius: 12px; padding: 48px; border: 1px solid rgba(124, 58, 237, 0.3); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: #F59E0B; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;">EXPERIENCE A LIVE SESSION</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Observe an Active Architecture War-Room
+        </h2>
+        <p style="color: #C4B5FD; max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          We invite qualified engineering leaders to audit one 60-minute live Saturday war-room session before formally submitting their application.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600;">Request Guest Observer Pass</a>
+          <a href="programs.html" class="btn btn-outline" style="color: #EDE9FE; border-color: rgba(255,255,255,0.3); padding: 12px 28px; border-radius: 6px; text-decoration: none;">Explore Masterclasses</a>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Bloombridge Academy Ltd. All rights reserved.</div>
-      <div style="color: var(--color-rose-accent);">ScaleNova EliteOS Demo Platform</div>
+  <!-- Modal: Sandbox Specs -->
+  <div class="modal-overlay" id="modal-sandbox" role="dialog" aria-modal="true" aria-labelledby="modal-sandbox-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #800020; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">INFRASTRUCTURE QUOTAS</span>
+          <h3 id="modal-sandbox-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: #1E1B4B; margin-top: 4px;">NVIDIA H100 & Enterprise Cloud Allocations</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+          Bloombridge provisions fully subsidized compute and telemetry infrastructure for every enrolled fellow throughout their 16-week masterclass:
+        </p>
+        <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 700; color: #1E1B4B; margin-bottom: 8px;">Per-Fellow Provisioned Quotas:</div>
+          <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+            &bull; <strong>GPU Compute:</strong> 40 Dedicated Hours on 8x NVIDIA H100 SXM5 80GB nodes<br>
+            &bull; <strong>Vector DB:</strong> Pinecone Enterprise Serverless & Milvus distributed cluster<br>
+            &bull; <strong>Observability:</strong> Full Datadog APM & OpenTelemetry distributed tracing suite<br>
+            &bull; <strong>Cloud Credits:</strong> ₹50,000 AWS/GCP sandbox quota for Kubernetes deployment
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 10px 20px; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">Apply for Fellowship Sandbox</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background: #0F0D24; color: #C4B5FD; padding: 64px 0 32px; border-top: 1px solid rgba(124, 58, 237, 0.2);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+            <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+            <div class="brand-name" style="color: #FFF; font-weight: 700;">Bloombridge Academy</div>
+          </div>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.8; max-width: 320px;">
+            Accelerating the trajectory of elite engineers and technology leaders through high-rigor executive masterclasses.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Masterclasses</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">AI & Autonomous Agents</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Ultra-Low Latency FinTech</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">The Executive CTO Track</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Enterprise MLOps & Inference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Admissions</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="admissions.html" style="color: inherit; text-decoration: none;">Admissions Process</a></li>
+            <li><a href="tuition-plans.html" style="color: inherit; text-decoration: none;">Tuition & Corporate Grants</a></li>
+            <li><a href="book-counselling.html" style="color: inherit; text-decoration: none;">Book Counselling Call</a></li>
+            <li><a href="success-stories.html" style="color: inherit; text-decoration: none;">Alumni Career Outcomes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Institution</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Academic Philosophy</a></li>
+            <li><a href="learning-experience.html" style="color: inherit; text-decoration: none;">Campus & Lab Experience</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Technical Research Blog</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Bloombridge Academy. ScaleNova EducationOS Client Platform.</div>
+        <div>Campuses: Bangalore &bull; Hyderabad &bull; Singapore &bull; Remote Hybrid</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/skills-matrix.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

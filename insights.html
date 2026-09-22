@@ -4,75 +4,333 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engineering Research & Whitepapers — Bloombridge Academy</title>
-  <meta name="description" content="Technical monographs on multi-agent consensus, LLM context compression, and distributed caching in enterprise AI systems.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
+  <meta name="description" content="Technical monographs on multi-agent consensus, LLM inference optimization, kernel bypass networking, and enterprise cloud FinOps.">
+  <meta name="keywords" content="AI engineering research, LLM inference benchmarks, KV-cache compression, FinTech kernel bypass whitepapers">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Engineering Research & Whitepapers — Bloombridge Academy">
+  <meta property="og:description" content="Frontier engineering publications and empirical benchmarks authored by Bloombridge faculty and fellows.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Bloombridge Academy Engineering Research",
+    "description": "Technical monographs and systems architecture whitepapers.",
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Bloombridge Academy"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23800020'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Scholastic Matrix Canvas -->
+  <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: #1E1B4B; color: #EDE9FE; padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%;"></span>
+        <span>RESEARCH INSTITUTE</span> &bull; Issue No. 12 &bull; Open-Access Engineering Monographs
+      </div>
+      <div>
+        <a href="programs.html" style="color: #F59E0B; text-decoration: none; margin-right: 16px; font-weight: 600;">View Masterclasses &rarr;</a>
+        Admissions: <a href="tel:+918069128800" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6912 8800</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-badge">BA</div><div class="brand-name">Bloombridge Academy</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="career-development.html" class="nav-link">Career</a></li>
-        <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
-        <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
-        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-        <li><a href="insights.html" class="nav-link active">Research</a></li>
-        <li><a href="contact.html" class="nav-link">Campuses</a></li>
-      </ul></nav>
-      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 20px;">Apply Now</a>
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
+        <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+        <div>
+          <div class="brand-name" style="font-weight: 700; color: #1E1B4B; font-size: 1.15rem;">Bloombridge Academy</div>
+          <div style="font-size: 0.68rem; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase;">Institute of Advanced Technology & Leadership</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="career-development.html" class="nav-link">Career</a></li>
+          <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
+          <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
+          <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+          <li><a href="tuition-plans.html" class="nav-link">Tuition</a></li>
+          <li><a href="insights.html" class="nav-link active">Research</a></li>
+          <li><a href="contact.html" class="nav-link">Campuses</a></li>
+        </ul>
+      </nav>
+      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 22px; font-size: 0.85rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">Apply Now</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 56px;">
-        <span class="eyebrow">Academic Research</span>
-        <h1>Frontier Engineering Publications</h1>
-        <p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.7; margin-top: 16px;">
-          Applied engineering research authored by Bloombridge faculty and alumni fellows.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: #800020; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">APPLIED RESEARCH & EMPIRICAL BENCHMARKS</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.3rem, 5vw, 3.4rem); color: #1E1B4B; line-height: 1.15; margin: 12px 0 16px;">
+          Frontier Engineering Publications
+        </h1>
+        <p style="font-size: 1.15rem; color: #64748B; line-height: 1.8; max-width: 760px;">
+          Empirical research, latency benchmarks, and architectural post-mortems authored by Bloombridge faculty chairs and alumni fellows operating high-throughput production clusters.
         </p>
       </div>
 
-      <div class="grid-3">
-        <div class="program-card">
-          <span class="cohort-tag">RESEARCH WHITEPAPER</span>
-          <h3>Decentralized Agent Swarms vs. Centralized Orchestrators</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.6; margin-top: 8px;">
-            Evaluating fault recovery rates, message bus saturation, and token latency trade-offs across 1,000 autonomous tool-calling agents.
-          </p>
-          <a href="book-counselling.html" style="color: var(--color-violet-primary); font-size: 0.85rem; font-weight: 700; margin-top: 16px; display: inline-block;">Download Paper (PDF) &rarr;</a>
+      <!-- KPI Stat Ribbon -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="32" data-suffix=" Papers">32 Papers</div>
+          <div class="kpi-label">Peer-Reviewed Systems Monographs</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="64" data-suffix="%">64%</div>
+          <div class="kpi-label">Average GPU Memory Saved in Benchmarks</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-prefix="8x " data-suffix=" H100">8x H100</div>
+          <div class="kpi-label">Empirical Hardware Testbed</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="50" data-suffix="k+ Reads">50k+ Reads</div>
+          <div class="kpi-label">Staff & Principal Engineer Circulation</div>
+        </div>
+      </div>
+
+      <!-- 6 Technical Whitepaper Cards (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">FEATURED MONOGRAPHS</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            Recent Architecture Whitepapers
+          </h2>
         </div>
 
-        <div class="program-card">
-          <span class="cohort-tag">ARCHITECTURE BENCHMARK</span>
-          <h3>KV-Cache Compression in Production LLM Inference</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.6; margin-top: 8px;">
-            How multi-query attention (MQA) and dynamic quantization lower memory footprint by 64% without accuracy degradation.
-          </p>
-          <a href="book-counselling.html" style="color: var(--color-violet-primary); font-size: 0.85rem; font-weight: 700; margin-top: 16px; display: inline-block;">Download Paper (PDF) &rarr;</a>
-        </div>
+        <div class="grid-3">
+          <!-- Paper 1 -->
+          <div class="program-card tilt-card" data-modal="modal-paper-agents">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">AUTONOMOUS AI SYSTEMS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1E1B4B; margin: 12px 0 8px;">Decentralized Agent Swarms vs. Centralized Orchestrators</h3>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              Empirical evaluation of fault recovery, message bus saturation, and token latency across 1,000 autonomous tool-calling agents.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">LangGraph Benchmarks</span>
+              <span class="chip">14 min read</span>
+            </div>
+            <a href="javascript:void(0)" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Read Executive Abstract &rarr;</a>
+          </div>
 
-        <div class="program-card">
-          <span class="cohort-tag">EXECUTIVE STUDY</span>
-          <h3>The 2026 Engineering Executive Compensation Report</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.6; margin-top: 8px;">
-            In-depth salary, equity, and variable pay benchmarks across 500+ Indian tech leaders and Global In-House Centers.
-          </p>
-          <a href="book-counselling.html" style="color: var(--color-violet-primary); font-size: 0.85rem; font-weight: 700; margin-top: 16px; display: inline-block;">Download Paper (PDF) &rarr;</a>
+          <!-- Paper 2 -->
+          <div class="program-card tilt-card" data-modal="modal-paper-kvcache">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">INFERENCE OPTIMIZATION</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1E1B4B; margin: 12px 0 8px;">KV-Cache Compression in Production LLM Serving</h3>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              How Multi-Query Attention (MQA) and FP8 dynamic quantization lower VRAM footprints by 64% without downstream degradation.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">vLLM & Triton</span>
+              <span class="chip">18 min read</span>
+            </div>
+            <a href="javascript:void(0)" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Read Executive Abstract &rarr;</a>
+          </div>
+
+          <!-- Paper 3 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">LOW-LATENCY SYSTEMS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1E1B4B; margin: 12px 0 8px;">Solarflare Kernel Bypass vs. DPDK</h3>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              A nanosecond-level deterministic comparison of OpenOnload TCP/UDP stacks under 40 Gbps synthetic market data bursts.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">&lt; 850ns Latency</span>
+              <span class="chip">12 min read</span>
+            </div>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Explore FinTech Track &rarr;</a>
+          </div>
+
+          <!-- Paper 4 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">EXECUTIVE FINOPS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1E1B4B; margin: 12px 0 8px;">The Engineering Balance Sheet: Valuing Tech Debt</h3>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              A mathematical framework for translating code decay and deferred refactoring into EBITDA drag for board-level audits.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">CTO Practicum</span>
+              <span class="chip">15 min read</span>
+            </div>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Explore CTO Track &rarr;</a>
+          </div>
+
+          <!-- Paper 5 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">DISTRIBUTED CONSENSUS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1E1B4B; margin: 12px 0 8px;">Raft Split-Brain Survival in Multi-Region Clusters</h3>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              Empirical analysis of cross-region network partitions across AWS ap-south-1 (Mumbai) and Singapore regions using Chaos Mesh.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Chaos Mesh</span>
+              <span class="chip">11 min read</span>
+            </div>
+            <a href="learning-experience.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Chaos Labs &rarr;</a>
+          </div>
+
+          <!-- Paper 6 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">SPECULATIVE DECODING</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1E1B4B; margin: 12px 0 8px;">Heterogeneous Speculative Decoding at Scale</h3>
+            <p style="color: #64748B; font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px;">
+              Draft model pairing on cost-effective L4 GPUs verifying speculative candidate tokens against an H100 target server.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">2.8x Speedup</span>
+              <span class="chip">16 min read</span>
+            </div>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View AI Fellowship &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application CTA Banner -->
+      <div style="background: #1E1B4B; color: #EDE9FE; border-radius: 12px; padding: 48px; border: 1px solid rgba(124, 58, 237, 0.3); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: #F59E0B; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;">RESEARCH CONSORTIUM</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Receive Our Quarterly Monograph Series
+        </h2>
+        <p style="color: #C4B5FD; max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          Join 50,000+ staff engineers, engineering directors, and CTOs receiving our declassified architecture benchmarks directly.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600;">Subscribe to Research Dispatches</a>
+          <a href="programs.html" class="btn btn-outline" style="color: #EDE9FE; border-color: rgba(255,255,255,0.3); padding: 12px 28px; border-radius: 6px; text-decoration: none;">Explore Masterclasses</a>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Bloombridge Academy Ltd. All rights reserved.</div>
-      <div style="color: var(--color-rose-accent);">ScaleNova EliteOS Demo Platform</div>
+  <!-- Modal 1: Agent Swarms Whitepaper Abstract -->
+  <div class="modal-overlay" id="modal-paper-agents" role="dialog" aria-modal="true" aria-labelledby="modal-paper-agents-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #800020; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">EXECUTIVE MONOGRAPH ABSTRACT</span>
+          <h3 id="modal-paper-agents-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: #1E1B4B; margin-top: 4px;">Decentralized Agent Swarms vs. Centralized Orchestrators</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+          Authored by Dr. Arvind Swaminathan and Fellowship Cohort 03 Fellows. Published August 2026.
+        </p>
+        <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 700; color: #1E1B4B; margin-bottom: 8px;">Key Findings & Empirical Data:</div>
+          <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+            &bull; <strong>Single-Point Failures:</strong> Centralized router architectures collapsed when tool invocation error rates crossed 4.2%<br>
+            &bull; <strong>Gossip Protocols:</strong> Peer-to-peer state distribution reduced mean-time-to-recovery (MTTR) by 76% under node preemption<br>
+            &bull; <strong>Token Overhead:</strong> Hierarchical supervisor trees consumed 38% fewer tokens than fully meshed agent networks<br>
+            &bull; <strong>Code Release:</strong> Benchmarks released under MIT license on the Bloombridge Research GitHub
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 10px 20px; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">Download Full 34-Page PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: KV-Cache Compression Abstract -->
+  <div class="modal-overlay" id="modal-paper-kvcache" role="dialog" aria-modal="true" aria-labelledby="modal-paper-kvcache-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #800020; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">BENCHMARK SUMMARY</span>
+          <h3 id="modal-paper-kvcache-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: #1E1B4B; margin-top: 4px;">KV-Cache Compression in Production LLM Serving</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+          Authored by Bloombridge Systems Lab. Evaluated on 8x NVIDIA H100 SXM5 with vLLM v0.6+ and FlashInfer.
+        </p>
+        <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 700; color: #1E1B4B; margin-bottom: 8px;">Key Optimization Metrics:</div>
+          <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+            &bull; <strong>VRAM Reduction:</strong> FP8 dynamic quantization lowered per-token cache storage from 32 bytes down to 8.2 bytes<br>
+            &bull; <strong>Throughput Multiplier:</strong> Concurrent request capacity doubled from 180 req/s to 410 req/s per server node<br>
+            &bull; <strong>Perplexity Delta:</strong> Zero measurable loss on MMLU and GSM8K benchmarks with context lengths up to 64k tokens
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 10px 20px; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">Download Full Benchmark Whitepaper</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background: #0F0D24; color: #C4B5FD; padding: 64px 0 32px; border-top: 1px solid rgba(124, 58, 237, 0.2);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+            <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+            <div class="brand-name" style="color: #FFF; font-weight: 700;">Bloombridge Academy</div>
+          </div>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.8; max-width: 320px;">
+            Accelerating the trajectory of elite engineers and technology leaders through high-rigor executive masterclasses.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Masterclasses</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">AI & Autonomous Agents</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Ultra-Low Latency FinTech</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">The Executive CTO Track</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Enterprise MLOps & Inference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Admissions</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="admissions.html" style="color: inherit; text-decoration: none;">Admissions Process</a></li>
+            <li><a href="tuition-plans.html" style="color: inherit; text-decoration: none;">Tuition & Corporate Grants</a></li>
+            <li><a href="book-counselling.html" style="color: inherit; text-decoration: none;">Book Counselling Call</a></li>
+            <li><a href="success-stories.html" style="color: inherit; text-decoration: none;">Alumni Career Outcomes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Institution</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Academic Philosophy</a></li>
+            <li><a href="learning-experience.html" style="color: inherit; text-decoration: none;">Campus & Lab Experience</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Technical Research Blog</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Bloombridge Academy. ScaleNova EducationOS Client Platform.</div>
+        <div>Campuses: Bangalore &bull; Hyderabad &bull; Singapore &bull; Remote Hybrid</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/skills-matrix.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

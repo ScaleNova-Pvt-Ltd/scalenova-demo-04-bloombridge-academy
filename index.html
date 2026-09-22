@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Scholastic Matrix Canvas -->
+  <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Academy Bar -->
+  <div class="top-academy-bar">
+    <div class="container top-academy-inner">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span class="academic-dot"></span>
+        <span>ACADEMIC COHORT 2026 ADMISSIONS OPEN</span> &bull; Cyber City Gurugram &bull; Bengaluru
+      </div>
+      <div>
+        <a href="tuition-plans.html" style="color:#F59E0B; text-decoration:none; margin-right:16px;">View Tuition & Plans &rarr;</a>
+        Admissions: <a href="tel:+911246985000" style="color:#FFF; text-decoration:none;">+91 124 698 5000</a>
+      </div>
+    </div>
+  </div>
   <!-- Academic Header -->
   <header class="site-header">
     <div class="container header-inner">
@@ -357,5 +373,44 @@
       }
     }
   </script>
+
+  <!-- Dean's Welcome Video Modal -->
+  <div class="modal-overlay" id="deansWelcomeModal" onclick="if(event.target===this) closeDeansWelcome()">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeDeansWelcome()">&times;</button>
+      <span class="eyebrow" style="color:#7C3AED;">DEAN'S ADDRESS &bull; EXECUTIVE LEARNING</span>
+      <h3 style="margin: 10px 0 16px;">Leading in an Era of Exponential Systems Architecture</h3>
+      <div class="video-responsive-wrapper">
+        <video controls poster="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+        Dr. Alistair Vance, Dean of Executive Studies, outlines how Bloombridge bridges academic rigour with direct enterprise implementation across our hybrid fellowships.
+      </p>
+      <div style="margin-top: 20px; display:flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn btn-secondary" onclick="closeDeansWelcome()">Close Window</button>
+        <a href="book-counselling.html" class="btn btn-primary">Schedule Counselling &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openDeansWelcome() {
+      document.getElementById('deansWelcomeModal').classList.add('active');
+    }
+    function closeDeansWelcome() {
+      const modal = document.getElementById('deansWelcomeModal');
+      modal.classList.remove('active');
+      const video = modal.querySelector('video');
+      if (video) video.pause();
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="src/components/skills-matrix.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

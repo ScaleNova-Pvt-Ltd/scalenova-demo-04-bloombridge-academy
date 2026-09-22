@@ -4,72 +4,381 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alumni Success Stories & Career Milestones — Bloombridge Academy</title>
-  <meta name="description" content="Discover how Bloombridge fellows leveraged our masterclasses into VP of AI, Chief Architect, and Founder roles.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
+  <meta name="description" content="Discover how Bloombridge fellows transitioned into VP of AI, Chief Architect, and Founder roles with audited 180%+ compensation growth.">
+  <meta name="keywords" content="tech alumni success, VP of engineering salary, CTO transition case study India, AI fellow reviews">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alumni Success Stories & Career Milestones — Bloombridge Academy">
+  <meta property="og:description" content="Verified career trajectories: From Senior Engineers to Enterprise CTOs and Venture Founders.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Bloombridge Academy Alumni Career Outcomes",
+    "description": "Verified case studies and career transitions of technology fellows.",
+    "publisher": {
+      "@type": "EducationalOrganization",
+      "name": "Bloombridge Academy"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23800020'/><path d='M8 22L16 10L24 22H8Z' fill='%23FFFFFF'/></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Scholastic Matrix Canvas -->
+  <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: #1E1B4B; color: #EDE9FE; padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: #F59E0B; border-radius: 50%;"></span>
+        <span>AUDITED ALUMNI OUTCOMES</span> &bull; 850+ Senior Tech Leaders Placed &bull; Bangalore &bull; Singapore
+      </div>
+      <div>
+        <a href="programs.html" style="color: #F59E0B; text-decoration: none; margin-right: 16px; font-weight: 600;">View Cohort Programs &rarr;</a>
+        Admissions: <a href="tel:+918069128800" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6912 8800</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-badge">BA</div><div class="brand-name">Bloombridge Academy</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="career-development.html" class="nav-link">Career</a></li>
-        <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
-        <li><a href="success-stories.html" class="nav-link active">Alumni</a></li>
-        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-        <li><a href="insights.html" class="nav-link">Research</a></li>
-        <li><a href="contact.html" class="nav-link">Campuses</a></li>
-      </ul></nav>
-      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 20px;">Apply Now</a>
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
+        <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+        <div>
+          <div class="brand-name" style="font-weight: 700; color: #1E1B4B; font-size: 1.15rem;">Bloombridge Academy</div>
+          <div style="font-size: 0.68rem; color: #64748B; letter-spacing: 0.08em; text-transform: uppercase;">Institute of Advanced Technology & Leadership</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="career-development.html" class="nav-link">Career</a></li>
+          <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
+          <li><a href="success-stories.html" class="nav-link active">Alumni</a></li>
+          <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+          <li><a href="tuition-plans.html" class="nav-link">Tuition</a></li>
+          <li><a href="insights.html" class="nav-link">Research</a></li>
+          <li><a href="contact.html" class="nav-link">Campuses</a></li>
+        </ul>
+      </nav>
+      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 22px; font-size: 0.85rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">Apply Now</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 56px;">
-        <span class="eyebrow">Alumni Impact</span>
-        <h1>Executive Career Transitions</h1>
-        <p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.7; margin-top: 16px;">
-          Explore verified trajectories of fellows who completed our executive programs.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: #800020; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">AUDITED CAREER OUTCOMES</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.3rem, 5vw, 3.4rem); color: #1E1B4B; line-height: 1.15; margin: 12px 0 16px;">
+          Executive Transitions & Leadership Stories
+        </h1>
+        <p style="font-size: 1.15rem; color: #64748B; line-height: 1.8; max-width: 760px;">
+          Discover verified case studies of senior practitioners who transformed hands-on technical masterclasses into VP of Engineering, Chief Architect, and Venture-backed Founder roles.
         </p>
       </div>
 
-      <div class="grid-2">
-        <div class="program-card">
-          <span class="cohort-tag">AI ARCHITECTURE ALUMNI</span>
-          <h3>Karthik Ramanathan</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 16px;">
-            <strong>Previous:</strong> Lead Software Engineer, Tier-1 IT Services<br>
-            <strong>Current:</strong> Vice President of AI Platforms, Global Fintech Bank
-          </p>
-          <div style="background: var(--color-lavender-light); padding: 16px; border-radius: 8px; font-size: 0.85rem; color: var(--color-text-main); line-height: 1.6;">
-            "The multi-agent orchestration and production GPU scaling modules allowed me to pass a rigorous 5-round architecture vetting process with complete confidence."
-          </div>
+      <!-- KPI Stat Ribbon -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="850" data-suffix="+">850+</div>
+          <div class="kpi-label">Executive Fellows Graduated</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="78" data-suffix="%">78%</div>
+          <div class="kpi-label">Promoted / Placed Within 90 Days</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-prefix="₹" data-counter="1.2" data-suffix=" Cr">₹1.2 Cr</div>
+          <div class="kpi-label">Highest Individual Alumni Compensation</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-prefix="$" data-counter="45" data-suffix="M+">$45M+</div>
+          <div class="kpi-label">Venture Capital Raised by Alumni Startups</div>
+        </div>
+      </div>
+
+      <!-- Interactive Alumni Sector Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">IMPACT STRATA</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            Alumni Outcomes by Specialization
+          </h2>
+          <p style="color: #64748B; font-size: 0.95rem;">Select a technical stratum to examine career leap data and verified before/after profiles.</p>
         </div>
 
-        <div class="program-card">
-          <span class="cohort-tag">CTO TRACK ALUMNI</span>
-          <h3>Dr. Shweta Kulkarni</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 16px;">
-            <strong>Previous:</strong> Director of Engineering, E-Commerce Unicorn<br>
-            <strong>Current:</strong> Co-Founder & CTO, Autonomous Supply Chain Venture ($6M Seed)
-          </p>
-          <div style="background: var(--color-lavender-light); padding: 16px; border-radius: 8px; font-size: 0.85rem; color: var(--color-text-main); line-height: 1.6;">
-            "The engineering leadership program didn't just teach technology; it gave me the executive vocabulary and financial architecture frameworks needed to raise institutional capital."
+        <div class="tech-switcher">
+          <div class="switcher-nav">
+            <button class="switcher-btn active" data-target="alumni-ai">01 AI & Autonomous Agents</button>
+            <button class="switcher-btn" data-target="alumni-fintech">02 High-Frequency FinTech</button>
+            <button class="switcher-btn" data-target="alumni-cto">03 Executive CTOs & Founders</button>
           </div>
+
+          <div class="switcher-content">
+            <!-- Sector 1 -->
+            <div class="switcher-panel active" id="alumni-ai">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">AI PLATFORMS TRANSITION</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">From Lead Engineer to VP of AI Platforms</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-alumni-karthik" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">View Full Case Dossier &rarr;</button>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Fellows in our Applied Generative AI fellowship mastered multi-agent supervisor graphs and Triton model optimization, transitioning from standard SaaS full-stack engineering to architecting enterprise LLM platforms.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Featured Alumni</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Karthik Ramanathan</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Compensation Leap</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">₹28 LPA &rarr; ₹64 LPA (+128%)</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Target Organization</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Global FinTech Bank GCC</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sector 2 -->
+            <div class="switcher-panel" id="alumni-fintech">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">LOW-LATENCY TRANSITION</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">From Backend Architect to Head of Core Infrastructure</h3>
+                </div>
+                <a href="career-development.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; border-color: #800020; color: #800020;">Explore FinTech Career Tracks &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Equipped with kernel-bypass networking and lock-free C++ data structures, alumni secured pivotal roles across algorithmic trading desks and Tier-1 market makers in Mumbai and Singapore.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Featured Alumni</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Meera Nambiar</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Compensation Leap</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">₹35 LPA &rarr; ₹78 LPA (+122%)</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Target Organization</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Quantitative Hedge Fund Desk</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sector 3 -->
+            <div class="switcher-panel" id="alumni-cto">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span class="chip chip-crimson">VENTURE CO-FOUNDER TRANSITION</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1E1B4B; margin-top: 8px;">From Director of Eng to Funded Co-Founder & CTO</h3>
+                </div>
+                <a href="programs.html" class="btn btn-violet" style="padding: 8px 16px; font-size: 0.8rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">View CTO Masterclass &rarr;</a>
+              </div>
+              <p style="color: #475569; line-height: 1.8; margin-bottom: 24px;">
+                Leveraged executive boardroom simulations, tech debt valuation, and angel syndicate intros to spin out deep-tech ventures and secure institutional seed rounds from Peak XV and Accel.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Featured Alumni</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Dr. Shweta Kulkarni</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Capital Secured</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">$6.2M Institutional Seed</div>
+                </div>
+                <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; border-left: 3px solid #800020;">
+                  <div style="font-size: 0.75rem; color: #64748B; text-transform: uppercase;">Enterprise Domain</div>
+                  <div style="font-size: 1.15rem; font-weight: 700; color: #1E1B4B; margin-top: 4px;">Autonomous Supply Chain AI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Verified Alumni Profiles (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: #800020; font-weight: 700; text-transform: uppercase;">VERIFIED PROFILES</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #1E1B4B; margin-top: 8px;">
+            Fellow Milestones in Detail
+          </h2>
+        </div>
+
+        <div class="grid-2">
+          <!-- Story 1 -->
+          <div class="program-card tilt-card" data-modal="modal-alumni-karthik">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">AI ARCHITECTURE COHORT 03</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Karthik Ramanathan</h3>
+            <div style="font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+              <strong>Previous:</strong> Lead Software Engineer, Tier-1 IT Services<br>
+              <strong>Current:</strong> VP of AI Platforms, Global FinTech Bank GCC
+            </div>
+            <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 16px; border-left: 3px solid #800020;">
+              "The multi-agent orchestration and vLLM production tuning modules allowed me to pass a rigorous 5-round architecture vetting process with absolute confidence."
+            </div>
+            <a href="javascript:void(0)" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Read Full Interview &rarr;</a>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">CTO TRACK COHORT 02</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Dr. Shweta Kulkarni</h3>
+            <div style="font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+              <strong>Previous:</strong> Director of Engineering, E-Commerce Unicorn<br>
+              <strong>Current:</strong> Co-Founder & CTO, Autonomous Supply Chain AI ($6M Seed)
+            </div>
+            <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 16px; border-left: 3px solid #800020;">
+              "The boardroom simulation clinics completely demystified the process of presenting technical risk to venture capitalists. We closed our seed round in 6 weeks."
+            </div>
+            <a href="book-counselling.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Track Details &rarr;</a>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">DISTRIBUTED SYSTEMS COHORT 04</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Vikramaditya Sen</h3>
+            <div style="font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+              <strong>Previous:</strong> Senior Cloud Architect, Telecom Major<br>
+              <strong>Current:</strong> Chief Enterprise Architect, HealthTech Cloud Enterprise
+            </div>
+            <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 16px; border-left: 3px solid #800020;">
+              "The hands-on chaos engineering clinics and Raft consensus implementations gave me the exact vocabulary to redesign our multi-region healthcare data backbone."
+            </div>
+            <a href="programs.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">View Architecture Track &rarr;</a>
+          </div>
+
+          <!-- Story 4 -->
+          <div class="program-card tilt-card">
+            <span class="cohort-tag" style="background: #800020; color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">FINTECH INFRASTRUCTURE COHORT 01</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 12px 0 8px;">Meera Nambiar</h3>
+            <div style="font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+              <strong>Previous:</strong> Staff Software Engineer, Payments Platform<br>
+              <strong>Current:</strong> Head of Low-Latency Infrastructure, Quantitative Fund
+            </div>
+            <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 16px; border-left: 3px solid #800020;">
+              "Going deep on Solarflare kernel bypass and hardware timestamping in the laboratory was the single biggest turning point of my 12-year engineering career."
+            </div>
+            <a href="career-development.html" style="color: #800020; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Read FinTech Outcomes &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application CTA Banner -->
+      <div style="background: #1E1B4B; color: #EDE9FE; border-radius: 12px; padding: 48px; border: 1px solid rgba(124, 58, 237, 0.3); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: #F59E0B; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;">CONNECT WITH AN ALUMNUS</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Speak with a Bloombridge Fellow
+        </h2>
+        <p style="color: #C4B5FD; max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          Get unvarnished feedback on cohort workload, faculty caliber, and post-graduation salary negotiations directly from a graduated fellow.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600;">Request Alumni Introduction</a>
+          <a href="programs.html" class="btn btn-outline" style="color: #EDE9FE; border-color: rgba(255,255,255,0.3); padding: 12px 28px; border-radius: 6px; text-decoration: none;">View Masterclass Catalog</a>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Bloombridge Academy Ltd. All rights reserved.</div>
-      <div style="color: var(--color-rose-accent);">ScaleNova EliteOS Demo Platform</div>
+  <!-- Modal: Karthik Case Study -->
+  <div class="modal-overlay" id="modal-alumni-karthik" role="dialog" aria-modal="true" aria-labelledby="modal-alumni-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #800020; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">ALUMNI CASE DOSSIER</span>
+          <h3 id="modal-alumni-title" style="font-family: var(--font-heading); font-size: 1.5rem; color: #1E1B4B; margin-top: 4px;">Karthik Ramanathan — VP of AI Platforms</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+          Karthik had spent 9 years leading engineering modules inside enterprise IT services. While his engineering fundamentals were exceptional, he lacked proof of shipping production-scale generative AI infrastructure on multi-node GPU clusters.
+        </p>
+        <div style="background: #F8FAFC; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 700; color: #1E1B4B; margin-bottom: 8px;">The Fellowship Trajectory:</div>
+          <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
+            &bull; <strong>Capstone Project:</strong> Multi-Agent SEC 10-K extraction swarm with streaming token-level verification<br>
+            &bull; <strong>Performance Target:</strong> Slashed Triton inference latency by 3.4x using flash-attention and FP8 quantization<br>
+            &bull; <strong>Panel Defense:</strong> Defended architecture before an ex-Google Principal Engineer and VP of Engineering<br>
+            &bull; <strong>Outcome:</strong> Hired directly into a Tier-1 GCC at ₹64 LPA base compensation
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="book-counselling.html" class="btn btn-violet" style="background: #800020; color: #FFF; padding: 10px 20px; font-size: 0.85rem; border-radius: 6px; text-decoration: none;">Apply for AI Masterclass</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background: #0F0D24; color: #C4B5FD; padding: 64px 0 32px; border-top: 1px solid rgba(124, 58, 237, 0.2);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+            <div class="brand-badge" style="background: #800020; color: #FFF; font-weight: 800; border-radius: 6px; padding: 6px 10px;">BA</div>
+            <div class="brand-name" style="color: #FFF; font-weight: 700;">Bloombridge Academy</div>
+          </div>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.8; max-width: 320px;">
+            Accelerating the trajectory of elite engineers and technology leaders through high-rigor executive masterclasses.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Masterclasses</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">AI & Autonomous Agents</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Ultra-Low Latency FinTech</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">The Executive CTO Track</a></li>
+            <li><a href="programs.html" style="color: inherit; text-decoration: none;">Enterprise MLOps & Inference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Admissions</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="admissions.html" style="color: inherit; text-decoration: none;">Admissions Process</a></li>
+            <li><a href="tuition-plans.html" style="color: inherit; text-decoration: none;">Tuition & Corporate Grants</a></li>
+            <li><a href="book-counselling.html" style="color: inherit; text-decoration: none;">Book Counselling Call</a></li>
+            <li><a href="success-stories.html" style="color: inherit; text-decoration: none;">Alumni Career Outcomes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-heading);">Institution</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #94A3B8;">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Academic Philosophy</a></li>
+            <li><a href="learning-experience.html" style="color: inherit; text-decoration: none;">Campus & Lab Experience</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Technical Research Blog</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B; flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Bloombridge Academy. ScaleNova EducationOS Client Platform.</div>
+        <div>Campuses: Bangalore &bull; Hyderabad &bull; Singapore &bull; Remote Hybrid</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/skills-matrix.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>
