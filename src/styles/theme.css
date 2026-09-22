@@ -100,6 +100,8 @@ h3 {
   gap: 14px;
   text-decoration: none;
   color: var(--bb-oxford-midnight);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-crest {
@@ -116,6 +118,7 @@ h3 {
   font-size: 1.2rem;
   box-shadow: 0 4px 12px rgba(45, 27, 105, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
 }
 
 .brand-text-col {
@@ -130,6 +133,7 @@ h3 {
   letter-spacing: -0.01em;
   color: var(--bb-oxford-midnight);
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand-sub {
@@ -139,6 +143,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--bb-rose-accent);
+  white-space: nowrap;
 }
 
 .nav-menu {
@@ -157,6 +162,7 @@ h3 {
   transition: var(--transition-smooth);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -177,8 +183,9 @@ h3 {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 12px 26px;
+  padding: 11px 22px;
   font-family: var(--font-sans);
   font-size: 0.88rem;
   font-weight: 600;
@@ -187,6 +194,8 @@ h3 {
   border-radius: 6px;
   border: 1px solid transparent;
   transition: var(--transition-smooth);
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 .btn-royal {
@@ -319,12 +328,21 @@ h3 {
   border: none;
   color: var(--bb-oxford-midnight);
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
 }
 
-@media (max-width: 960px) {
-  .nav-menu { display: none; }
-  .mobile-nav-toggle { display: block; }
+@media (max-width: 1024px) {
+  .nav-menu { display: none !important; }
+  .mobile-nav-toggle { display: flex !important; align-items: center; justify-content: center; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr !important; gap: 24px; }
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
 
 /* Form 2-Column Responsive Stacking */

@@ -60,20 +60,52 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="programs.html" class="nav-link">Programs</a></li>
-          <li><a href="career-development.html" class="nav-link">Career</a></li>
           <li><a href="learning-experience.html" class="nav-link">Experience</a></li>
-          <li><a href="success-stories.html" class="nav-link">Alumni</a></li>
           <li><a href="admissions.html" class="nav-link active">Admissions</a></li>
-          <li><a href="tuition-plans.html" class="nav-link">Tuition</a></li>
-          <li><a href="insights.html" class="nav-link">Research</a></li>
           <li><a href="contact.html" class="nav-link">Campuses</a></li>
         </ul>
       </nav>
-      <a href="book-counselling.html" class="btn btn-violet" style="padding: 10px 22px; font-size: 0.85rem; background: #800020; color: #FFF; border-radius: 6px; text-decoration: none;">Apply Now</a>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <a href="book-counselling.html" class="btn btn-royal" style="padding: 10px 22px; font-size: 0.85rem; white-space: nowrap;">Apply Now</a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation" onclick="toggleBloombridgeSidePanel()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Slide-Out Mobile App-Like Drawer -->
+  <div class="side-panel-overlay" id="bloombridgeSideOverlay" onclick="toggleBloombridgeSidePanel()"></div>
+  <aside class="side-panel-drawer" id="bloombridgeSideDrawer" aria-label="Mobile Navigation">
+    <div class="side-panel-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="brand-crest" style="width: 32px; height: 32px; font-size: 0.9rem;">BA</div>
+        <span class="brand-name" style="font-size: 1.1rem; color: #FFFFFF;">Bloombridge</span>
+      </div>
+      <button class="side-panel-close" aria-label="Close menu" onclick="toggleBloombridgeSidePanel()">&times;</button>
+    </div>
+    <ul class="side-panel-nav">
+      <li><a href="index.html">Home <span>&rarr;</span></a></li>
+      <li><a href="programs.html">Academic Programs <span>&rarr;</span></a></li>
+      <li><a href="program-detail.html">Curriculum Tracks & Degrees <span>&rarr;</span></a></li>
+      <li><a href="learning-experience.html">Pedagogy & Frontier Labs <span>&rarr;</span></a></li>
+      <li><a href="career-development.html">Career Development & Placements <span>&rarr;</span></a></li>
+      <li><a href="success-stories.html">Alumni Chairs & Founders <span>&rarr;</span></a></li>
+      <li><a href="admissions.html">Admissions Criteria <span>&rarr;</span></a></li>
+      <li><a href="tuition-plans.html">Tuition & Fellowship Plans <span>&rarr;</span></a></li>
+      <li><a href="insights.html">Research Papers & Tech Insights <span>&rarr;</span></a></li>
+      <li><a href="about.html">Institutional Foundation <span>&rarr;</span></a></li>
+      <li><a href="contact.html">Campuses & Admissions Office <span>&rarr;</span></a></li>
+      <li><a href="book-counselling.html">Apply / Book Academic Counselling <span>&rarr;</span></a></li>
+      <li><a href="sitemap.xml">XML Index <span>&rarr;</span></a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.8rem; color: #CBD5E1;">
+      <div>ADMISSIONS: +91 80 6912 8800</div>
+      <div style="margin-top: 4px;">KORAMANGALA &bull; BENGALURU</div>
+    </div>
+  </aside>
 
   <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 96px;">
     <div class="container">
@@ -380,5 +412,24 @@
   <script src="src/components/skills-matrix.js"></script>
   <script src="src/components/modal-controller.js"></script>
   <script src="src/components/visual-infographics.js"></script>
+
+  <script>
+    function toggleBloombridgeSidePanel() {
+      const drawer = document.getElementById("bloombridgeSideDrawer");
+      const overlay = document.getElementById("bloombridgeSideOverlay");
+      if (drawer && overlay) {
+        const isOpen = drawer.classList.contains("active");
+        if (isOpen) {
+          drawer.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.classList.remove("side-panel-open");
+        } else {
+          drawer.classList.add("active");
+          overlay.classList.add("active");
+          document.body.classList.add("side-panel-open");
+        }
+      }
+    }
+  </script>
 </body>
 </html>
