@@ -12,3 +12,6 @@ DEMO_ID = "DEMO-04"
 CLIENT_NAME = "Bloombridge Academy"
 INDUSTRY = "Education & Training"
 PRIMARY_DOMAIN = "demo4.scalenovasys.com"
+
+workers_dev = true
+
