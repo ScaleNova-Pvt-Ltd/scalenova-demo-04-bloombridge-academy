@@ -180,7 +180,7 @@
 
             <div style="margin-top: 24px;">
               <h4 style="font-family: var(--font-heading); color: #1E1B4B; font-size: 1.15rem; margin-bottom: 8px;">Curriculum Overview</h4>
-              <p id="drawer-summary" style="color: #475569; font-size: 0.92rem; line-height: 1.7;"></p>
+              <p id="drawer-summary" style="color: #0F172A; font-size: 0.92rem; line-height: 1.7;"></p>
             </div>
 
             <div style="margin-top: 24px;">
@@ -271,7 +271,7 @@
           border: none;
           font-size: 2rem;
           line-height: 1;
-          color: #64748B;
+          color: #1E293B;
           cursor: pointer;
           padding: 0 4px;
         }
@@ -298,7 +298,7 @@
           display: block;
           font-size: 0.7rem;
           font-weight: 700;
-          color: #64748B;
+          color: #1E293B;
           letter-spacing: 0.05em;
         }
         .meta-val {
@@ -342,7 +342,7 @@
         }
         .module-desc {
           font-size: 0.82rem;
-          color: #475569;
+          color: #0F172A;
           line-height: 1.5;
         }
         .drawer-grant-notice {
@@ -395,7 +395,7 @@
         .curriculum-filter-pill {
           background: #F1F5F9;
           border: 1px solid #E2E8F0;
-          color: #475569;
+          color: #0F172A;
           padding: 6px 14px;
           border-radius: 20px;
           font-size: 0.82rem;
@@ -414,7 +414,7 @@
         }
         .curriculum-results-counter {
           font-size: 0.85rem;
-          color: #64748B;
+          color: #1E293B;
           margin-top: 14px;
           font-weight: 500;
         }
@@ -468,8 +468,8 @@
       if (filtered.length === 0) {
         container.innerHTML = `
           <div style="grid-column: 1 / -1; text-align: center; padding: 48px 24px; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 8px;">
-            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 12px; font-weight: 500;">No curriculum tracks match your criteria.</p>
-            <p style="font-size: 0.88rem; color: #64748B; margin-bottom: 20px;">Try searching for "C++", "AI", "Raft", or reset the category filters.</p>
+            <p style="font-size: 1.1rem; color: #0F172A; margin-bottom: 12px; font-weight: 500;">No curriculum tracks match your criteria.</p>
+            <p style="font-size: 0.88rem; color: #1E293B; margin-bottom: 20px;">Try searching for "C++", "AI", "Raft", or reset the category filters.</p>
             <button type="button" class="btn btn-secondary" id="btn-reset-filters">Reset All Filters</button>
           </div>
         `;
@@ -497,7 +497,7 @@
               <span style="font-size: 0.75rem; font-weight: 700; color: #800020; background: rgba(128,0,32,0.08); padding: 3px 8px; border-radius: 3px;">${prog.badge}</span>
             </div>
             <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1E1B4B; margin: 0 0 10px;">${prog.title}</h3>
-            <p style="color: #475569; font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px;">${prog.summary}</p>
+            <p style="color: #0F172A; font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px;">${prog.summary}</p>
             
             <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px;">
               ${prog.skills.map((s) => `<span class="drawer-skill-tag">${s}</span>`).join('')}
@@ -506,7 +506,7 @@
 
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E2E8F0; padding-top: 18px; flex-wrap: wrap; gap: 12px;">
             <div>
-              <span style="font-size: 0.72rem; color: #64748B; display: block; font-weight: 600;">FELLOWSHIP TUITION</span>
+              <span style="font-size: 0.72rem; color: #1E293B; display: block; font-weight: 600;">FELLOWSHIP TUITION</span>
               <strong style="color: #0F172A; font-size: 1.1rem;">${prog.tuition}</strong>
             </div>
             <div style="display: flex; gap: 10px;">
