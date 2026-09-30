@@ -1106,9 +1106,10 @@ input:focus, select:focus, textarea:focus {
 
 /* 4. SUBPAGE IN-WINDOW BREADCRUMB & NAVIGATION */
 .subpage-nav-bar {
+  margin-top: var(--header-height) !important;
   background: #F8FAFC !important;
   border-bottom: 1px solid #E2E8F0 !important;
-  padding: 12px 0 !important;
+  padding: 10px 0 !important;
   position: relative !important;
   z-index: 40 !important;
 }
@@ -1334,19 +1335,46 @@ body.side-panel-open {
 }
 
 /* 5. Mobile Compact Header [Logo] [☰] */
-@media (max-width: 640px) {
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
   .site-header {
     height: auto !important;
-    min-height: 64px !important;
-    padding: 10px 0 !important;
+    min-height: 60px !important;
+    padding: 8px 0 !important;
   }
   .header-inner {
     padding-left: 16px !important;
     padding-right: 16px !important;
     gap: 12px !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+  }
+  .header-cta-btn,
   .header-inner .btn {
-    display: none !important; /* Hide header CTA on mobile for clean app header */
+    display: none !important; /* Hide header CTA on mobile for clean iPhone app bar */
+  }
+  .brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  .brand-crest {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
   }
   .brand-sub {
     display: none !important; /* Hide secondary subtext on phones */
@@ -1354,7 +1382,185 @@ body.side-panel-open {
   .brand-name {
     font-size: 1.05rem !important;
     letter-spacing: -0.01em !important;
+    color: var(--bb-oxford-midnight) !important;
   }
+  .mobile-nav-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border: none !important;
+    background: transparent !important;
+    color: var(--bb-oxford-midnight) !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+  }
+}
+
+/* Hero Section & Academic Framing */
+.hero-section {
+  padding: 80px 0 72px 0;
+  background: linear-gradient(180deg, #F6F4FA 0%, #FCFBFE 100%);
+  border-bottom: 1px solid var(--bb-border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-actions-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 36px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--bb-border);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--bb-border);
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--bb-oxford-midnight);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-family: var(--font-meta);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bb-text-light);
+  margin-top: 4px;
+}
+
+.hero-media-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(45, 27, 105, 0.14);
+  border: 1px solid var(--bb-border);
+  position: relative;
+  background: #E8E5F0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.floating-academic-badge {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--bb-border);
+  border-radius: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 12px 28px rgba(45, 27, 105, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.floating-academic-badge.badge-top-right {
+  top: 18px;
+  right: 18px;
+}
+
+.floating-academic-badge.badge-bottom-right {
+  bottom: 24px;
+  right: 18px;
+}
+
+.badge-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.badge-label {
+  font-family: var(--font-meta);
+  font-size: 0.68rem;
+  color: var(--bb-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.badge-val {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--bb-oxford-midnight);
+  white-space: nowrap;
+}
+
+.hero-fellowship-highlight {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  background: #FFFFFF;
+  border: 1px solid var(--bb-border);
+  border-radius: 10px;
+  padding: 16px 22px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  max-width: 280px;
+  z-index: 4;
+}
+
+.fellowship-tag {
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bb-rose-accent);
+  font-weight: 700;
+}
+
+.fellowship-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  color: var(--bb-oxford-midnight);
+  margin-top: 4px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.cta-split-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
 }
 
 /* 6. Mobile Typography & Fluid Scaling */
@@ -1380,6 +1586,112 @@ body.side-panel-open {
     padding-right: 18px !important;
     max-width: 100% !important;
     width: 100% !important;
+  }
+  .hero-section {
+    padding: 32px 0 36px 0 !important;
+  }
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+  .hero-actions-row {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  .hero-actions-row .btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    text-align: center !important;
+    font-size: 0.95rem !important;
+  }
+  .hero-stats-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    margin-top: 24px !important;
+    padding-top: 18px !important;
+    text-align: center !important;
+  }
+  .stat-divider {
+    display: none !important;
+  }
+  .stat-num {
+    font-size: 1.35rem !important;
+  }
+  .stat-label {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.04em !important;
+  }
+  .hero-media-wrap {
+    width: 100% !important;
+    position: relative !important;
+    margin-top: 4px !important;
+  }
+  .hero-image-card {
+    width: 100% !important;
+    border-radius: 16px !important;
+    aspect-ratio: 16 / 10 !important;
+    overflow: hidden !important;
+    position: relative !important;
+    box-shadow: 0 12px 32px rgba(45, 27, 105, 0.12) !important;
+  }
+  .hero-img {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+  .floating-academic-badge.badge-top-right {
+    top: 10px !important;
+    right: 10px !important;
+    padding: 6px 10px !important;
+    gap: 8px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+  }
+  .floating-academic-badge.badge-top-right .badge-icon {
+    font-size: 1rem !important;
+  }
+  .floating-academic-badge.badge-top-right .badge-label {
+    font-size: 0.58rem !important;
+  }
+  .floating-academic-badge.badge-top-right .badge-val {
+    font-size: 0.78rem !important;
+  }
+  .floating-academic-badge.badge-bottom-right {
+    display: none !important; /* Keep mobile photo un-obscured */
+  }
+  .hero-fellowship-highlight {
+    position: relative !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin-top: 14px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    padding: 14px 18px !important;
+    box-shadow: 0 4px 16px rgba(45, 27, 105, 0.06) !important;
+  }
+  .cta-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    text-align: left !important;
+  }
+  .cta-split-grid div:last-child {
+    text-align: left !important;
+  }
+  .cta-split-grid .btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .faculty-grid,
+  .campuses-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
   .hero-editorial-grid,
   .hero-grid,

@@ -12,9 +12,15 @@
   <!-- Ambient 3D Scholastic Matrix Canvas -->
   <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-badge">BA</div><div class="brand-name">Bloombridge Academy</div></a>
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
+        <div class="brand-crest">BA</div>
+        <div class="brand-text-col">
+          <span class="brand-name">Bloombridge Academy</span>
+          <span class="brand-sub">Institute of Advanced Studies</span>
+        </div>
+      </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -25,8 +31,8 @@
         </ul>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <a href="book-counselling.html" class="btn btn-royal" style="padding: 10px 22px; font-size: 0.85rem; white-space: nowrap;">Apply Now</a>
+      <div class="header-actions">
+        <a href="book-counselling.html" class="btn btn-royal header-cta-btn" style="padding: 10px 22px; font-size: 0.85rem; white-space: nowrap;">Apply Now</a>
         <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation" onclick="toggleBloombridgeSidePanel()">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>

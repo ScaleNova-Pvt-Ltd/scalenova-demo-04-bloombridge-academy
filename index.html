@@ -12,9 +12,9 @@
   <!-- Ambient 3D Scholastic Matrix Canvas -->
   <canvas id="academic-matrix-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
+      <a href="index.html" class="brand-logo" aria-label="Bloombridge Academy Home">
         <div class="brand-crest">BA</div>
         <div class="brand-text-col">
           <span class="brand-name">Bloombridge Academy</span>
@@ -31,8 +31,8 @@
         </ul>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <a href="book-counselling.html" class="btn btn-royal" style="padding: 10px 22px; font-size: 0.85rem; white-space: nowrap;">Apply Now</a>
+      <div class="header-actions">
+        <a href="book-counselling.html" class="btn btn-royal header-cta-btn" style="padding: 10px 22px; font-size: 0.85rem; white-space: nowrap;">Apply Now</a>
         <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation" onclick="toggleBloombridgeSidePanel()">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -82,9 +82,10 @@
 
   <main style="padding-top: var(--header-height);">
     <!-- Editorial Hero: Human-Centered Academic Photography -->
-    <section style="padding: 88px 0 80px 0; background: linear-gradient(180deg, #F6F4FA 0%, #FCFBFE 100%); border-bottom: 1px solid var(--bb-border);">
+    <!-- Editorial Hero: Human-Centered Academic Photography -->
+    <section class="hero-section">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center;">
+        <div class="hero-grid">
           <div>
             <div class="academic-eyebrow">
               <span>EST. 2018</span> &bull; <span>ADMISSIONS 2026/2027</span>
@@ -95,57 +96,59 @@
             <p style="font-size: 1.25rem; color: var(--bb-text-muted); line-height: 1.7; max-width: 580px; margin-bottom: 40px; font-weight: 300;">
               Education designed to help people think bigger, build confidence and create meaningful futures through disciplined technological enquiry.
             </p>
-            <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center;">
+            <div class="hero-actions-row">
               <a href="programs.html" class="btn btn-royal" style="padding: 15px 32px; font-size: 0.95rem;">Explore Programs</a>
               <a href="book-counselling.html" class="btn btn-outline-royal" style="padding: 15px 32px; font-size: 0.95rem;">Book Counselling</a>
             </div>
 
             <!-- Academic Credential Indicators -->
-            <div style="display: flex; gap: 36px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--bb-border);">
-              <div>
-                <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--bb-oxford-midnight);">1 : 8</div>
-                <div style="font-family: var(--font-meta); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--bb-text-light);">Faculty Ratio</div>
+            <div class="hero-stats-row">
+              <div class="stat-item">
+                <div class="stat-num">1 : 8</div>
+                <div class="stat-label">Faculty Ratio</div>
               </div>
-              <div style="width: 1px; height: 40px; background: var(--bb-border);"></div>
-              <div>
-                <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--bb-oxford-midnight);">42</div>
-                <div style="font-family: var(--font-meta); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--bb-text-light);">Countries Represented</div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-num">42</div>
+                <div class="stat-label">Countries Represented</div>
               </div>
-              <div style="width: 1px; height: 40px; background: var(--bb-border);"></div>
-              <div>
-                <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--bb-oxford-midnight);">88%</div>
-                <div style="font-family: var(--font-meta); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--bb-text-light);">Executive Chairs Placement</div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-num">88%</div>
+                <div class="stat-label">Executive Chairs Placement</div>
               </div>
             </div>
           </div>
 
           <!-- Academic Visual Spread with 3D Badges -->
-          <div style="position: relative;" class="hero-media-wrap">
-            <div class="floating-academic-badge" style="top: 18px; right: 18px;">
-              <span style="font-size: 1.2rem; color: var(--bb-academic-gold);">🎓</span>
-              <div>
-                <div style="font-family: var(--font-meta); font-size: 0.7rem; color: var(--bb-text-light); text-transform: uppercase;">Faculty Ratio</div>
-                <div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--bb-oxford-midnight);">1 : 8 Mentorship</div>
-              </div>
-            </div>
-
-            <div class="floating-academic-badge" style="bottom: 24px; right: 18px; animation-delay: -3s;">
-              <span style="font-size: 1.2rem; color: #10B981;">🏛</span>
-              <div>
-                <div style="font-family: var(--font-meta); font-size: 0.7rem; color: var(--bb-text-light); text-transform: uppercase;">Placement Track</div>
-                <div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--bb-oxford-midnight);">88% Leadership Chairs</div>
-              </div>
-            </div>
-
-            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(45, 27, 105, 0.14); border: 1px solid var(--bb-border);">
+          <div class="hero-media-wrap">
+            <div class="hero-image-card">
               <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" 
                    alt="Bloombridge Academy seminar room and student research fellows" 
-                   style="width: 100%; height: 500px; object-fit: cover; display: block;">
+                   class="hero-img">
+
+              <div class="floating-academic-badge badge-top-right">
+                <span class="badge-icon">🎓</span>
+                <div>
+                  <div class="badge-label">Faculty Ratio</div>
+                  <div class="badge-val">1 : 8 Mentorship</div>
+                </div>
+              </div>
+
+              <div class="floating-academic-badge badge-bottom-right" style="animation-delay: -3s;">
+                <span class="badge-icon">🏛</span>
+                <div>
+                  <div class="badge-label">Placement Track</div>
+                  <div class="badge-val">88% Leadership Chairs</div>
+                </div>
+              </div>
             </div>
-            <div style="position: absolute; bottom: -24px; left: -24px; background: #FFF; border: 1px solid var(--bb-border); border-radius: 8px; padding: 18px 24px; box-shadow: 0 16px 36px rgba(0,0,0,0.08); max-width: 280px;">
-              <div style="font-family: var(--font-meta); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--bb-rose-accent); font-weight: 700;">Fellowship Highlight</div>
-              <div style="font-family: var(--font-display); font-size: 1.05rem; color: var(--bb-oxford-midnight); margin-top: 4px; font-weight: 600;">Autonomous Systems & Governance Seminar</div>
+
+            <div class="hero-fellowship-highlight">
+              <div class="fellowship-tag">Fellowship Highlight</div>
+              <div class="fellowship-title">Autonomous Systems & Governance Seminar</div>
             </div>
+          </div>
         </div>
       </div>
     </section>
@@ -246,7 +249,7 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px;">
+        <div class="faculty-grid grid-3col">
           <div style="border: 1px solid var(--bb-border); border-radius: 8px; overflow: hidden; background: var(--bb-parchment);">
             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" 
                  alt="Prof. Elena Vance" style="width: 100%; height: 320px; object-fit: cover; display: block;">
@@ -288,7 +291,7 @@
 
     <!-- Admissions Consultation Callout -->
     <section style="padding: 88px 0; background: var(--bb-oxford-midnight); color: #FFF;">
-      <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center;">
+      <div class="container cta-split-grid">
         <div>
           <div style="font-family: var(--font-meta); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--bb-lavender-tint); font-weight: 700; margin-bottom: 12px;">
             Cohort Spring 2026 Admissions
